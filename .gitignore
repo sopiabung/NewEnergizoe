@@ -1,3 +1,5 @@
 *.classpath
 *.project
 workspace/**/.gitignore
+workspace/Servers/Tomcat v9.0 Server at localhost-config/
+*.jar
