@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" 
+`<%@ page language="java" contentType="text/html; charset=UTF-8" 
     pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
@@ -44,6 +44,9 @@
     </style>
   </head>
 <body>
+	
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
+	
   <form>
     <div class="container mt-5">
       <h3 class="text-center">채팅목록</h3>
@@ -65,9 +68,7 @@
                          <c:forEach var="vo" items="">
                          <tr class="board_info">
                            <td width="6%" class="text-center">D</td>
-                           <td width="44%"><a href="#">D</a>
-                             &nbsp;&nbsp;
-                           </td>
+                           <td width="44%"><a href="#">D</a>&nbsp;&nbsp;</td>
                            <td width="15%" class="text-center">D</td>
                            <td width="17%" class="text-center">작성일</td>
                            <td width="13%" class="text-center">구분</td>
@@ -90,5 +91,9 @@
               </div>
             </div>
     </form>
+    
+    <%@include file="/WEB-INF/views/common/paging.jsp" %>
+		<%@include file="/WEB-INF/views/common/footer.jsp" %>
+    
   </body>
 </html>

@@ -47,6 +47,8 @@
     
   </head>
 <body>
+
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
     
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   
@@ -88,6 +90,8 @@
       </div>
   </div>
     </form>
+    
+    <%@include file="/WEB-INF/views/common/footer.jsp" %>
     
 
   </body>

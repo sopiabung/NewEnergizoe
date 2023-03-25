@@ -15,6 +15,9 @@
 
 </head>
 <body>
+	
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
+
     <section style="background-color: #eee;">
         <div class="container py-5">
       
@@ -97,5 +100,7 @@
       
         </div>
       </section>
+      
+      <%@include file="/WEB-INF/views/common/footer.jsp" %>
 </body>
 </html>
