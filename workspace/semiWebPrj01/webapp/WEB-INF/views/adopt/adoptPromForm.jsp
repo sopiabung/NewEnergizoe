@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
     pageEncoding="UTF-8"%>
 <!doctype html>
+
+<%
+	pageContext.setAttribute("root", request.getContextPath());
+%>
+
 <html lang="en">
 
 <head>
@@ -17,13 +22,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <!-- CSS FILES -->
     <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="templatemo-festava-live.css" rel="stylesheet">
+    <link rel="stylesheet" href="${root}/resources/css/common/adoptForm.css"> 
     <!-- open api.js 주소검색 -->
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <style>
         .agree p{
             font-size: 15px;
         }
+        
+        
 
         .notice p{
             font-size: 10px;
@@ -32,6 +39,8 @@
 </head>
 
 <body>
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
+
         <section class="contact-section section-padding" id="section_6">
             <div class="container">
                 <div class="row">
@@ -356,6 +365,8 @@
                 </div>
             </div>
         </section>
+        
+        <%@include file="/WEB-INF/views/common/footer.jsp" %>
 </body>
 
 </html>
