@@ -75,6 +75,8 @@
 
 <body>
 
+		
+		<%@include file="/WEB-INF/views/common/header.jsp"%>
 
         <!-- 게시글 부분 -->
         <div class="container post">
@@ -237,7 +239,7 @@
 
 
         </div>
-        <!-- 게시글 부분 -->
+        <!-- 게시글 부분 끝 -->
 
 
 
@@ -259,7 +261,7 @@
 
 
 
-    
+    <%@include file="/WEB-INF/views/common/footer.jsp" %>
 
 </body>
 

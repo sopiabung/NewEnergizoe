@@ -75,14 +75,14 @@
 
 <body>
 
-
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
  
 
     <!-- 입양 이미지 -->
     <div>
    
-      <!-- Image Slider -->
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Image Slider -->
+ 	<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -317,35 +317,7 @@
       </div>
       <!-- 게시글 목록 끝 -->
 
-      <!-- 게시글 리스트 -->
-      <div class="btn-toolbar center" role="toolbar" aria-label="Toolbar with button groups">
-
-
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-primary">
-            << </button>
-        </div>
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-primary">
-            < </button>
-        </div>
-
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-primary">1</button>
-          <button type="button" class="btn btn-primary">2</button>
-          <button type="button" class="btn btn-primary">3</button>
-          <button type="button" class="btn btn-primary">4</button>
-        </div>
-
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-primary">></button>
-        </div>
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-primary">>></button>
-        </div>
-
-      </div>
-      <!-- 게시글 리스트 끝 -->
+	<%@include file="/WEB-INF/views/common/paging.jsp" %>
 
 
 
@@ -369,11 +341,7 @@
 
 
 
-      <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>&copy; 2023 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
+	<%@include file="/WEB-INF/views/common/footer.jsp" %>
 
 </body>
 

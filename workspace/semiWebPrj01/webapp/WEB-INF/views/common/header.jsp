@@ -1,4 +1,12 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<%
+	pageContext.setAttribute("root", request.getContextPath());
+%>
+
+<link rel="stylesheet" href="${root}/resources/css/common/header.css">
+
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="bootstrap" viewBox="0 0 118 94">
           <title>Bootstrap</title>
@@ -11,16 +19,16 @@
          <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
            <a href="/mainmain.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
              <svg class="bi me-2" width="80" height="72" role="img" aria-label="PetTail">
-               <image href="image/logo.png".jpg width="80" height="72" />
+              <img src="/app01/resources/img/로고.png" alt="로고" width="70" height="70">
              </svg>
            </a>
      
            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-             <li><a href="#" class="nav-link px-2 link-dark">소개</a></li>
-             <li><a href="#" class="nav-link px-2 link-dark">실종신고</a></li>
-             <li><a href="#" class="nav-link px-2 link-dark">입양신청</a></li>
-             <li><a href="#" class="nav-link px-2 link-dark">봉사예약</a></li>
-             <li><a href="#" class="nav-link px-2 link-dark">자유게시판</a></li>
+             <li><a href="#" class="nav-link px-2 link-dark">소개</a></li>&nbsp;&nbsp;&nbsp;
+             <li><a href="#" class="nav-link px-2 link-dark">실종신고</a></li>&nbsp;&nbsp;&nbsp;
+             <li><a href="#" class="nav-link px-2 link-dark">입양신청</a></li>&nbsp;&nbsp;&nbsp;
+             <li><a href="#" class="nav-link px-2 link-dark">봉사예약</a></li>&nbsp;&nbsp;&nbsp;
+             <li><a href="#" class="nav-link px-2 link-dark">자유게시판</a></li>&nbsp;&nbsp;&nbsp;
            </ul>
      
            <div class="col-md-3 text-end">
