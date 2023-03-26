@@ -46,4 +46,28 @@ public class AdoptReviewService {
 		
 	}
 	
-}
+	//입양후기게시글작성
+	public int ReviewWrite(AdoptVo vo) throws Exception {
+		
+		//비즈니스 로직
+		
+		//conn
+		Connection conn = JDBCTemplate.getConnection();
+		
+		//SQL (DAO)
+		AdoptReviewDao dao = new AdoptReviewDao();
+		int result = dao.ReviewWrite(conn , vo);
+		
+		//tx , close
+		if(result == 1) {
+			JDBCTemplate.commit(conn);
+		}else {
+			JDBCTemplate.rollback(conn);
+		}
+		
+		JDBCTemplate.close(conn);
+		
+		return result;
+	}
+	
+}//class

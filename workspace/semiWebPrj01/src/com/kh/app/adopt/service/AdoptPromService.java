@@ -47,5 +47,30 @@ public class AdoptPromService {
 		
 	}
 
+	//입양홍보게시글작성
+	public int PromWrite(AdoptVo vo) throws Exception {
+		
+		//비즈니스 로직
+		
+		//conn
+		Connection conn = JDBCTemplate.getConnection();
+		
+		//SQL (DAO)
+		AdoptPromDao dao = new AdoptPromDao();
+		int result = dao.PromWrite(conn , vo);
+		
+		//tx , close
+		if(result == 1) {
+			JDBCTemplate.commit(conn);
+		}else {
+			JDBCTemplate.rollback(conn);
+		}
+		
+		JDBCTemplate.close(conn);
+		
+		return result;
+		
+	}
+
 	
 }//class

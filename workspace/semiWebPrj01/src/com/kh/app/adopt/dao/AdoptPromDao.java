@@ -95,6 +95,23 @@ public class AdoptPromDao {
 		JDBCTemplate.close(pstmt);
 		
 		return adoptVo;
+	}
+
+	
+	//입양홍보게시글작성
+	public int PromWrite(Connection conn, AdoptVo vo) throws Exception {
+		
+		//SQL (close)
+		String sql = "INSERT INTO ADP_BO(ADP_NO , SHELTER_NO , TITLE , CONTENT) VALUES (SEQ_ADP_BO_NO.NEXTVAL , ? , ? , ?)";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, vo.getShelterNo());
+		pstmt.setString(2, vo.getTitle());
+		pstmt.setString(3, vo.getContent());
+		int result = pstmt.executeUpdate();
+		
+		JDBCTemplate.close(pstmt);
+		
+		return result;
 	}	
 	
 

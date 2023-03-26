@@ -12,7 +12,7 @@ import com.kh.app.adopt.service.AdoptReviewService;
 import com.kh.app.adopt.vo.AdoptVo;
 
 @WebServlet("/adopt/adoptReviewDetail")
-public class adoptReviewDetailController extends HttpServlet {
+public class AdoptReviewDetailController extends HttpServlet {
 	
 	//입양후기상세
 	@Override
