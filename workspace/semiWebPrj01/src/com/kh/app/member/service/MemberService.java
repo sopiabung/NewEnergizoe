@@ -10,7 +10,7 @@ public class MemberService {
 
 	//회원가입
 	public int join(MemberVo vo) throws Exception {
-	    // 회원가입 유효성 검사
+	    // 회원가입 내용
 	    if (vo.getId() == null || vo.getId().trim().length() == 0) {
 	        throw new Exception("아이디를 입력해주세요.");
 	    }

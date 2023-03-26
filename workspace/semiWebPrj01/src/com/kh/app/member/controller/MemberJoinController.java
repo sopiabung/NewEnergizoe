@@ -25,7 +25,7 @@ public class MemberJoinController extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		//데이터 꺼내기
-		String memberNo = req.getParameter("memberNo");				//회원번호
+		int memberNo = Integer.parseInt(req.getParameter("memberNo"));//회원번호
 		String memberDiv = req.getParameter("memberDiv");			//회원구분
 		String memberName = req.getParameter("memberName");			//회원이름
 		String memberId = req.getParameter("memberId");				//아이디
@@ -41,9 +41,9 @@ public class MemberJoinController extends HttpServlet{
 			
 		//데이터 뭉치기
 		MemberVo vo = new MemberVo();
-		vo.setDiv(memberNo);
+		vo.setNo(memberNo);
 		vo.setDiv(memberDiv);
-		vo.setDiv(memberName);
+		vo.setName(memberName);
 		vo.setId(memberId);
 		vo.setPwd(memberPwd);
 		vo.setNick(memberNick);
