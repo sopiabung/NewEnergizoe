@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class JDBCTemplate {
+public class JdbcTemplate {
 
 	public static Connection getConnection() {
 		
