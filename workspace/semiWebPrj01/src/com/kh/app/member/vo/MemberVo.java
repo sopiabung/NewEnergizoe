@@ -1,7 +1,9 @@
 package com.kh.app.member.vo;
 
+import java.time.LocalDateTime;
+
 public class MemberVo {
-	private String no;
+	private int no;
 	private String div;
 	private String name;
 	private String id;
@@ -14,12 +16,136 @@ public class MemberVo {
 	private String quitYn;
 	private String joinDate;
 	
-	public MemberVo() {
-		super();
-		// TODO Auto-generated constructor stub
+	
+public int getNo() {
+		return no;
 	}
 
-	public MemberVo(String no, String div, String name, String id, String pwd, String nick, String hp, String birth,
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
+
+	public String getDiv() {
+		return div;
+	}
+
+
+	public void setDiv(String div) {
+		this.div = div;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getId() {
+		return id;
+	}
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+
+	public String getPwd() {
+		return pwd;
+	}
+
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+
+	public String getNick() {
+		return nick;
+	}
+
+
+	public void setNick(String nick) {
+		this.nick = nick;
+	}
+
+
+	public String getHp() {
+		return hp;
+	}
+
+
+	public void setHp(String hp) {
+		this.hp = hp;
+	}
+
+
+	public String getBirth() {
+		return birth;
+	}
+
+
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+
+
+	public String getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getQuitYn() {
+		return quitYn;
+	}
+
+
+	public void setQuitYn(String quitYn) {
+		this.quitYn = quitYn;
+	}
+
+
+	public String getJoinDate() {
+		return joinDate;
+	}
+
+
+	public void setJoinDate(String joinDate) {
+		this.joinDate = joinDate;
+	}
+
+
+@Override
+	public String toString() {
+		return "MemberVo [no=" + no + ", div=" + div + ", name=" + name + ", id=" + id + ", pwd=" + pwd + ", nick="
+				+ nick + ", hp=" + hp + ", birth=" + birth + ", address=" + address + ", email=" + email + ", quitYn="
+				+ quitYn + ", joinDate=" + joinDate + "]";
+	}
+
+
+public MemberVo(int no, String div, String name, String id, String pwd, String nick, String hp, String birth,
 			String address, String email, String quitYn, String joinDate) {
 		super();
 		this.no = no;
@@ -36,107 +162,23 @@ public class MemberVo {
 		this.joinDate = joinDate;
 	}
 
-	@Override
-	public String toString() {
-		return "MemberVo [no=" + no + ", div=" + div + ", name=" + name + ", id=" + id + ", pwd=" + pwd + ", nick="
-				+ nick + ", hp=" + hp + ", birth=" + birth + ", address=" + address + ", email=" + email + ", quitYn="
-				+ quitYn + ", joinDate=" + joinDate + "]";
+
+public MemberVo() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	public String getNo() {
-		return no;
+
+	//비밀번호 확인 메소드 추가..
+	public Object getPwdConfirm() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public void setNo(String no) {
-		this.no = no;
-	}
 
-	public String getDiv() {
-		return div;
-	}
-
-	public void setDiv(String div) {
-		this.div = div;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getPwd() {
-		return pwd;
-	}
-
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
-	}
-
-	public String getNick() {
-		return nick;
-	}
-
-	public void setNick(String nick) {
-		this.nick = nick;
-	}
-
-	public String getHp() {
-		return hp;
-	}
-
-	public void setHp(String hp) {
-		this.hp = hp;
-	}
-
-	public String getBirth() {
-		return birth;
-	}
-
-	public void setBirth(String birth) {
-		this.birth = birth;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getQuitYn() {
-		return quitYn;
-	}
-
-	public void setQuitYn(String quitYn) {
-		this.quitYn = quitYn;
-	}
-
-	public String getJoinDate() {
-		return joinDate;
-	}
-
-	public void setJoinDate(String joinDate) {
-		this.joinDate = joinDate;
+	public void setJoinDate(LocalDateTime localDateTime) {
+		 this.joinDate = joinDate;
+		
 	}
 	
 	
