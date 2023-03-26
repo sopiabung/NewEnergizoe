@@ -52,6 +52,7 @@
 </head>
 
 <body class="bg-light">
+<%@include file="/WEB-INF/views/common/header.jsp"%>
 
   <!-- header 올자리 -->
 
@@ -230,6 +231,7 @@
 
     <!-- ================ HTML은 이 위에다가 ==================== -->
     <!-- FOOTER  올 자리 -->
+    <%@include file="/WEB-INF/views/common/footer.jsp" %>
     
     <script src="form-validation.js"></script>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

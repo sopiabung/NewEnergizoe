@@ -41,6 +41,7 @@
     <link href="headers.css" rel="stylesheet">
   </head>
 <body>
+<%@include file="/WEB-INF/views/common/header.jsp"%>
     <!-- 헤더들어갈자리자리 -->
 
   <!-- 메인 -->
@@ -105,6 +106,8 @@
   </table>
 </main>
   <!-- 푸터들어갈자리 -->
+    <%@include file="/WEB-INF/views/common/paging.jsp" %>
+	<%@include file="/WEB-INF/views/common/footer.jsp" %>
     
   </body>
 </html>

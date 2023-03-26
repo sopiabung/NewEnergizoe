@@ -45,6 +45,7 @@
 </head>
 
 <body class="bg-light">
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
 
   <!-- 헤더 자리 -->
 
@@ -162,6 +163,7 @@
   <!-- ================ HTML은 이 위에다가 ==================== -->
 
   <!-- 헤더 자리 -->
+  <%@include file="/WEB-INF/views/common/footer.jsp" %>
 
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   <!-- 아래한줄 있어야하는건지 모르겠음 -->

@@ -133,6 +133,7 @@
 </head>
 
 <body>
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
         <div class="container-fluid py-5 logo-guide">
           <img class="guide-img" src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/28/111500268.2.jpg" alt="">
           <ul class="nav justify-content-center select-menu">
@@ -263,6 +264,7 @@
 
 
             <!-- FOOTER -->
+            <%@include file="/WEB-INF/views/common/footer.jsp" %>
            
 
             <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

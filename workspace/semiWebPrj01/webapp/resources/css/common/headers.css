@@ -75,8 +75,3 @@ background-color: #0081f3;
 color: white;
 }
 
-#menu{
-   display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}

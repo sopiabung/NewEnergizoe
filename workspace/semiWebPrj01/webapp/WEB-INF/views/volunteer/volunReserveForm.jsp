@@ -183,7 +183,9 @@
 </head>
 
 <body>
- 
+
+	<%@include file="/WEB-INF/views/common/header.jsp"%> 
+	
     <!-- 본문 여기에 -->
     <div class="vol-info">
       <img class="vol-photo" src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/28/111500268.2.jpg" alt="">
@@ -447,6 +449,7 @@
       </div>
     </div>
     <!-- FOOTER -->
+    <%@include file="/WEB-INF/views/common/footer.jsp" %>
     
 
 </body>

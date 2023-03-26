@@ -75,7 +75,7 @@
 </head>
 
 <body>
-
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
 
  
   
@@ -325,30 +325,10 @@
 
       </div>
       <!-- 게시글 리스트 끝 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      
+	    <%@include file="/WEB-INF/views/common/paging.jsp" %>
+		<%@include file="/WEB-INF/views/common/footer.jsp" %>
+	
 </body>
 
 </html>

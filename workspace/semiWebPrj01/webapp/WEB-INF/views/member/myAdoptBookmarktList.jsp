@@ -91,6 +91,7 @@
 </style></head>
 
 <body>
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
 
       <!-- 헤더 자리 -->
       
@@ -350,5 +351,8 @@
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 	// ]]>
-</script>
-</body></html>
+		</script>
+		<%@include file="/WEB-INF/views/common/paging.jsp" %>
+		<%@include file="/WEB-INF/views/common/footer.jsp" %>
+	</body>
+</html>

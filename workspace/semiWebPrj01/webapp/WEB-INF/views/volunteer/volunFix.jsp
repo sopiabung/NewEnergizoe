@@ -99,7 +99,7 @@
 </head>
 
 <body>
- 
+ 	<%@include file="/WEB-INF/views/common/header.jsp"%>
 
   <!-- ================ HTML은 이 아래에다가 ================== -->
   <div class="wrapper">
@@ -189,6 +189,7 @@
 
     <!-- ================ HTML은 이 위에다가 ==================== -->
     <!-- FOOTER -->
+    <%@include file="/WEB-INF/views/common/footer.jsp" %>
    
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

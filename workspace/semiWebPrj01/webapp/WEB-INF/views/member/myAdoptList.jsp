@@ -82,7 +82,9 @@
 <body>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-
+    
+    
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
 	      <!-- 헤더 자리 -->
 
     <!-- 입양 이미지 -->
@@ -307,7 +309,10 @@
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 	// ]]>
-</script>
-
-
-</body></html>
+		</script>
+	
+	
+		<%@include file="/WEB-INF/views/common/paging.jsp" %>
+		<%@include file="/WEB-INF/views/common/footer.jsp" %>
+	</body>
+</html>

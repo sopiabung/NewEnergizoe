@@ -45,6 +45,7 @@
       </path>
     </symbol>
   </svg>
+  <%@include file="/WEB-INF/views/common/header.jsp"%>
 
   <main>
   
@@ -145,6 +146,7 @@
       </div>
     </div>
     <!-- FOOTER -->
+    <%@include file="/WEB-INF/views/common/footer.jsp" %>
    
 </body>
 </html>

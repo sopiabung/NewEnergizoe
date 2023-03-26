@@ -49,6 +49,7 @@
 
 <body>
   <!-- 헤더들어갈자리 -->
+  <%@include file="/WEB-INF/views/common/header.jsp"%>
 
     <!-- 본문 여기에 -->
     <main class="flex-shrink-0">
@@ -79,7 +80,7 @@
 
   </main>
     <!-- 푸터들어갈자리 -->
-
+	<%@include file="/WEB-INF/views/common/footer.jsp" %>
 
 </body>
 

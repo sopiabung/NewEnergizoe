@@ -45,7 +45,7 @@
   </head>
   
 <body>
-    
+	<%@include file="/WEB-INF/views/common/header.jsp"%>  
   <!-- 헤더 들어갈자리 -->
 
   <!-- 메인 -->
@@ -156,6 +156,8 @@
   </div>
   
     <!-- 푸터 들어갈자리 -->
+    <%@include file="/WEB-INF/views/common/paging.jsp" %>
+	<%@include file="/WEB-INF/views/common/footer.jsp" %>
 
   </body>
 </html>

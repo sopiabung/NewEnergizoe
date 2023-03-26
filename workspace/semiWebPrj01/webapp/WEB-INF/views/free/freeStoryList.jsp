@@ -48,6 +48,8 @@
     <link href="headers.css" rel="stylesheet">
   </head>
 <body>
+
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
     <!-- 헤더들어갈자리  -->
   <!-- 메인 -->
   <div class="text-center">
@@ -131,6 +133,8 @@
   </table>
 
     <!-- 푸터들어갈자리 -->
+    <%@include file="/WEB-INF/views/common/paging.jsp" %>
+	<%@include file="/WEB-INF/views/common/footer.jsp" %>
 
 
   </body>

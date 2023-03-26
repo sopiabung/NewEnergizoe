@@ -137,6 +137,7 @@
     </head>
 
     <body>
+    	<%@include file="/WEB-INF/views/common/header.jsp"%>
        <!-- 헤더 자리 -->
 
         <!-- 게시글 부분 -->
@@ -403,5 +404,7 @@
 	// ]]>
         </script>
     </body>
+    
+    <%@include file="/WEB-INF/views/common/footer.jsp" %>
 
-    </html>
+</html>

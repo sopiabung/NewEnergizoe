@@ -20,9 +20,10 @@
 
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="headers.css" rel="stylesheet">
   </head>
+  
+  <body>
+  <%@include file="/WEB-INF/views/common/header.jsp"%>
 
 
   <!-- Image Slider -->
@@ -256,5 +257,6 @@
   <hr class="featurette-divider">
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <%@include file="/WEB-INF/views/common/footer.jsp" %>
   </body>
 </html>

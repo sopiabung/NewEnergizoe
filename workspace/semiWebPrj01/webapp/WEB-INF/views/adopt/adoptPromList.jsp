@@ -318,29 +318,6 @@
       <!-- 게시글 목록 끝 -->
 
 	<%@include file="/WEB-INF/views/common/paging.jsp" %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<%@include file="/WEB-INF/views/common/footer.jsp" %>
 
 </body>
