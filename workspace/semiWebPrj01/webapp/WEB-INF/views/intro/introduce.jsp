@@ -26,6 +26,7 @@
     
   </head>
 <body>
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
     
 
 
@@ -166,6 +167,6 @@
       </div>
 
     
-
+	<%@include file="/WEB-INF/views/common/footer.jsp" %>
   </body>
 </html>

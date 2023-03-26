@@ -140,6 +140,7 @@
 </head>
 
 <body>
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
         <div class="container-fluid py-5 logo-guide">
           <img class="guide-img" src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/28/111500268.2.jpg" alt="">
           <ul class="nav justify-content-center select-menu">
@@ -275,9 +276,14 @@
 
             <!-- 게시글 리스트 끝 -->
             <!-- FOOTER -->
+            <%@include file="/WEB-INF/views/common/paging.jsp" %>
+			<%@include file="/WEB-INF/views/common/footer.jsp" %>
             
 
             <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+            
+            
+            
 </body>
 
 </html>

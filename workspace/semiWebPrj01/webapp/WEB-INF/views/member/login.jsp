@@ -43,6 +43,7 @@
 </head>
 
 <body>
+	<%@include file="/WEB-INF/views/common/header.jsp"%>
 
   <!-- 헤더 자리 -->
 
@@ -84,6 +85,8 @@
   <!-- ================ 본문은 이 위에다가 ==================== -->
 
   <!-- 푸터 자리 -->
+  <%@include file="/WEB-INF/views/common/footer.jsp" %>
+  
 
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
