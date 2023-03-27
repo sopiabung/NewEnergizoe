@@ -56,8 +56,8 @@ public class MemberDao {
 
 			loginMember = new MemberVo();
 			loginMember.setId(id);
-			loginMember.setId(pwd);
-			loginMember.setId(nick);
+			loginMember.setPwd(pwd);
+			loginMember.setNick(nick);
 		}
 		JDBCTemplate.close(rs);
 		JDBCTemplate.close(pstmt);
