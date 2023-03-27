@@ -49,10 +49,6 @@
 
 
 
-    a {
-      text-decoration: none;
-      font-size: x-large;
-    }
 
 
 
@@ -87,7 +83,7 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" viewBox="0 0 2560 1600">
-          <image href="KH-IMG/허스키5마리.jpg" width="100%" height="100%" />
+          <image href="resources/img/puppy.jpg" width="100%" height="100%" />
         </svg>
         
 

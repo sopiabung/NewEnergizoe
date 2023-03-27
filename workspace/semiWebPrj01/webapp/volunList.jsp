@@ -244,37 +244,7 @@
               <button class="btn btn-primary vol-btn">글 작성하기</button>
             </div>
 
-            <!-- 게시글 리스트 -->
-            <div class="btn-toolbar center d-flex justify-content-center col-sm-12" role="toolbar"
-              aria-label="Toolbar with button groups">
-
-
-              <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary">
-                  &lt;&lt; </button>
-              </div>
-              <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary">
-                  &lt; </button>
-              </div>
-
-              <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary">1</button>
-                <button type="button" class="btn btn-primary">2</button>
-                <button type="button" class="btn btn-primary">3</button>
-                <button type="button" class="btn btn-primary">4</button>
-              </div>
-
-              <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary">&gt;</button>
-              </div>
-              <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary">&gt;&gt;</button>
-              </div>
-
-            </div>
-
-            <!-- 게시글 리스트 끝 -->
+            
             <!-- FOOTER -->
             <%@include file="/WEB-INF/views/common/paging.jsp" %>
 			<%@include file="/WEB-INF/views/common/footer.jsp" %>

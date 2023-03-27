@@ -88,7 +88,7 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" viewBox="0 0 2560 1600">
-          <image href="KH-IMG/유기견.jpg" width="100%" height="100%" />
+          <image href="resources/img/유기견.jpg" width="100%" height="100%" />
         </svg>
         
 
@@ -296,35 +296,7 @@
       </div>
       <!-- 게시글 목록 끝 -->
 
-      <!-- 게시글 리스트 -->
-      <div class="btn-toolbar center" role="toolbar" aria-label="Toolbar with button groups">
-
-
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-primary">
-            << </button>
-        </div>
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-primary">
-            < </button>
-        </div>
-
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-primary">1</button>
-          <button type="button" class="btn btn-primary">2</button>
-          <button type="button" class="btn btn-primary">3</button>
-          <button type="button" class="btn btn-primary">4</button>
-        </div>
-
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-primary">></button>
-        </div>
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-primary">>></button>
-        </div>
-
-      </div>
-      <!-- 게시글 리스트 끝 -->
+    
       
 	    <%@include file="/WEB-INF/views/common/paging.jsp" %>
 		<%@include file="/WEB-INF/views/common/footer.jsp" %>

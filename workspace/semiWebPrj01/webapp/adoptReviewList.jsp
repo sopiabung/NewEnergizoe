@@ -49,10 +49,6 @@
 
 
 
-    a {
-      text-decoration: none;
-      font-size: x-large;
-    }
 
 
 
@@ -74,6 +70,7 @@
 </head>
 
 <body>
+ 		<%@include file="/WEB-INF/views/common/header.jsp"%>
 
   <div>
     <h1>입양후기</h1>
@@ -85,7 +82,6 @@
   </div>
 
 
- 		<%@include file="/WEB-INF/views/common/header.jsp"%>
 
    
       <!-- 게시글 목록 -->

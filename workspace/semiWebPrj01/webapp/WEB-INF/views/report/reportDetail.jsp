@@ -209,12 +209,9 @@
 
                 </h1>
 
-
-
-
             </div>
-            <!-- 게시글 부분 -->
         </div>
+        <!-- 게시글 부분 -->
 
       <%@include file="/WEB-INF/views/common/footer.jsp" %>
 

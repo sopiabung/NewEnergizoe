@@ -22,7 +22,7 @@
 
     <style>
      
-      .nav-item{
+      .nav-itemFree{
         margin-left: 310px;
       }
       #navbarSet{
@@ -68,7 +68,7 @@
 
   <!-- 메인 -->
   <div class="text-center" >
-    <a href="#"><img src="img/b1.jpg" width="100%" class="img-fluid" alt="..."></a> 
+    <a href="#"><img src="resources/img/b1.jpg" width="100%" class="img-fluid" alt="..."></a> 
   </div>
   
   <nav class="navbar navbar-expand-lg bg-light" id="navbarSet">
@@ -78,13 +78,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav"  id="navbarNavIn">
-          <li class="nav-item">
+          <li class="nav-itemFree">
             <a class="nav-link active" aria-current="page" href="#">사진자랑</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-itemFree">
             <a class="nav-link active" aria-current="page" href="#">우리아이이야기</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-itemFree">
             <a class="nav-link active" aria-current="page" href="#">소통해요</a>
           </li>
         </ul>

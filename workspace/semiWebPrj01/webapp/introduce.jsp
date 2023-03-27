@@ -45,7 +45,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <svg class="bd-placeholder-img" width="100%" height="100%" viewBox="0 0 1920 1080" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <image href="image/dog51920x1080.jpg".jpg width="100%" />              
+                <image href="resources/img/dog51920x1080.jpg".jpg width="100%" />              
             </svg>
             
     
@@ -61,7 +61,7 @@
           </div>
           <div class="carousel-item">
             <svg class="bd-placeholder-img" width="100%" height="100%"  viewBox="0 0 1920 1080" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <image href="image/dog31920x1080.jpg".jpg width="100%"  /> 
+                <image href="resources/img/dog31920x1080.jpg".jpg width="100%"  /> 
             </svg>
     
             <div class="container">
@@ -76,7 +76,7 @@
           </div>
           <div class="carousel-item">
             <svg class="bd-placeholder-img" width="100%" height="100%" viewBox="0 0 1920 1080" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <image href="image/dog71920x1080.jpg".jpg width="100%"  />
+                <image href="resources/img/dog71920x1080.jpg".jpg width="100%"  />
             </svg>
     
             <div class="container">
@@ -126,7 +126,7 @@
             </div>
             <div class="col-auto d-none d-lg-block">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="189"  role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <image href="image/pettail.png".jpg width="150" height="189" />
+                    <image href="resources/img/pettail.png".jpg width="150" height="189" />
                   </svg>
     
             </div>
@@ -158,7 +158,7 @@
             </div>
             <div class="col-auto d-none d-lg-block">
               <svg class="bd-placeholder-img" width="200" height="250"  role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" x="100%" y="100%"/>
-                <image href="image/dog11.png".jpg width="150" height="189" />
+                <image href="resources/img/dog11.png".jpg width="150" height="189" />
             </svg>
     
             </div>

@@ -28,7 +28,7 @@
 
       }
      
-      .nav-item{
+      .nav-itemFree{
         margin-left: 310px;
       }
       #navbarSet{
@@ -50,7 +50,7 @@
 
   <!-- 메인 -->
   <div class="text-center">
-    <a href="#"><img src="img/b1.jpg" width="100%" class="img-fluid" alt="..."></a>
+    <a href="#"><img src="resources/img/b1.jpg" width="100%" class="img-fluid" alt="..."></a>
   </div>
   
 
@@ -61,13 +61,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav"  id="navbarNavIn">
-          <li class="nav-item">
+          <li class="nav-itemFree">
             <a class="nav-link active" aria-current="page" href="#">사진자랑</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-itemFree">
             <a class="nav-link active" aria-current="page" href="#">우리아이이야기</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-itemFree">
             <a class="nav-link active" aria-current="page" href="#">소통해요</a>
           </li>
         </ul>
@@ -83,7 +83,7 @@
     <div class="row">
       <div class="col-md-4 ">
         <div class="card">
-          <img src="img/d1.jpg"
+          <img src="resources/img/d1.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">우리 강아지에요!!</h5>
@@ -94,7 +94,7 @@
 
       <div class="col-md-4 ">
         <div class="card">
-          <img src="img/d1.jpg"
+          <img src="resources/img/d1.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">우리 강아지에요!!</h5>
@@ -105,7 +105,7 @@
 
       <div class="col-md-4 ">
         <div class="card">
-          <img src="img/d1.jpg"
+          <img src="resources/img/d1.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">우리 강아지에요!!</h5>
@@ -121,7 +121,7 @@
     <div class="row">
       <div class="col-md-4 ">
         <div class="card">
-          <img src="img/d1.jpg"
+          <img src="resources/img/d1.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">우리 강아지에요!!</h5>
@@ -132,7 +132,7 @@
 
       <div class="col-md-4 ">
         <div class="card">
-          <img src="img/d1.jpg"
+          <img src="resources/img/d1.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">우리 강아지에요!!</h5>
@@ -143,7 +143,7 @@
 
       <div class="col-md-4 ">
         <div class="card">
-          <img src="img/d1.jpg"
+          <img src="resources/img/d1.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">우리 강아지에요!!</h5>
