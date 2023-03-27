@@ -7,3 +7,4 @@ workspace/Servers2/
 *.prefs
 *.component
 *.xml
+workspace/semiWebPrj01/webapp/META-INF/MANIFEST.MF
