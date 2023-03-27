@@ -54,7 +54,7 @@
   <div class="container">
     <main>
       <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="/YW_images/강아지고양이손들.png" alt="강아지고양이손들" width="100%">
+        <img class="d-block mx-auto mb-4" src="resources/img/강아지고양이손들.png" alt="강아지고양이손들" width="100%">
         <div id="title">
           <h1>회원가입</h1>
           <p class="lead">저희와 함께 오갈데 없는 동물친구들의 손을 잡아주세요</p>

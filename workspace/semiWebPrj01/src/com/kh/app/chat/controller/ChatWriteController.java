@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 //변동가능!!
-@WebServlet("/board/chat")
+@WebServlet("/chat/writer")
 public class ChatWriteController extends HttpServlet {
 	
 	@Override

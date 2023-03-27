@@ -3,3 +3,8 @@
 workspace/**/.gitignore
 workspace/Servers/Tomcat v9.0 Server at localhost-config/
 *.jar
+workspace/Servers2/
+*.prefs
+*.component
+*.xml
+workspace/semiWebPrj01/webapp/META-INF/MANIFEST.MF
