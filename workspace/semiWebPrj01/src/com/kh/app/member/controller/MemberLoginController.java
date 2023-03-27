@@ -16,7 +16,7 @@ public class MemberLoginController extends HttpServlet{
 	//로그인 (화면)
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("/WEB-INF/views/member/loginForm.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/views/member/login.jsp").forward(req, resp);
 	}
 
 	//로그인 처리

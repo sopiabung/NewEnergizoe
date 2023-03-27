@@ -17,8 +17,8 @@ public class MemberJoinController extends HttpServlet{
 	//회원가입 (화면)
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		//경로 수정해야함..!!
-		req.getRequestDispatcher("/WEB-INF/views/member/joinForm.jsp").forward(req, resp);
+		
+		req.getRequestDispatcher("/WEB-INF/views/member/signup.jsp").forward(req, resp);
 	}
 	//회원가입
 	@Override
