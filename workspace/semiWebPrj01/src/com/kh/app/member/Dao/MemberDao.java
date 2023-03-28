@@ -32,6 +32,8 @@ public class MemberDao {
 		System.out.println(vo);
 		return result;
 	}
+	
+	
 	//로그인
 	public MemberVo login(Connection conn, MemberVo vo) throws Exception {
 
@@ -39,10 +41,9 @@ public class MemberDao {
 		String sql = "SELECT * FROM MEMBER WHERE ID = ? AND PWD = ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, vo.getId());
-		pstmt.setString(1, vo.getPwd());
+		pstmt.setString(2, vo.getPwd());
 		ResultSet rs = pstmt.executeQuery();
 
-		JDBCTemplate.close(pstmt);
 
 		//rs, 
 		MemberVo loginMember = null;
@@ -58,8 +59,11 @@ public class MemberDao {
 		}
 		JDBCTemplate.close(rs);
 		JDBCTemplate.close(pstmt);
+		
 		return loginMember;
 	}
+	
+	
 	//회원탈퇴
 	public int quit(Connection conn, MemberVo loginMember) throws Exception {
 		//SQL, close
@@ -76,43 +80,43 @@ public class MemberDao {
 	}
 
 	//추가된 메소드.. (MemberService의 중복 아이디, 검사해당 회원의 게시글이나 댓글 등을 삭제에 필요한 메소드)
-	public MemberVo getMemberById(Connection conn, String id) throws Exception {
-		//아이디로 회원정보 조회..
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		MemberVo member = null;
-
-		try {
-			String sql = "SELECT * FROM MEMBER WHERE ID = ?";
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
-
-			rs = pstmt.executeQuery();
-			if (rs.next()) {
-				member = new MemberVo();
-				member.setNo(rs.getInt("NO"));
-				member.setDiv(rs.getString("DIV"));
-				member.setName(rs.getString("NAME"));
-				member.setId(rs.getString("ID"));
-				member.setPwd(rs.getString("PWD"));
-				member.setNick(rs.getString("NICK"));
-				member.setHp(rs.getString("HP"));
-				member.setBirth(rs.getString("BIRTH"));
-				member.setAddress(rs.getString("ADDRESS"));
-				member.setEmail(rs.getString("EMAIL"));
-				member.setQuitYn(rs.getString("QUIT_YN"));
-				member.setJoinDate(rs.getTimestamp("JOIN_DATE").toLocalDateTime());
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new Exception("아이디로 회원정보를 조회하는 중 오류가 발생했습니다.");
-		} finally {
-			JDBCTemplate.close(rs);
-			JDBCTemplate.close(pstmt);
-		}
-
-		return member;
-	}
+//	public MemberVo getMemberById(Connection conn, String id) throws Exception {
+//		//아이디로 회원정보 조회..
+//		PreparedStatement pstmt = null;
+//		ResultSet rs = null;
+//		MemberVo member = null;
+//
+//		try {
+//			String sql = "SELECT * FROM MEMBER WHERE ID = ?";
+//			pstmt = conn.prepareStatement(sql);
+//			pstmt.setString(1, id);
+//
+//			rs = pstmt.executeQuery();
+//			if (rs.next()) {
+//				member = new MemberVo();
+//				member.setNo(rs.getInt("NO"));
+//				member.setDiv(rs.getString("DIV"));
+//				member.setName(rs.getString("NAME"));
+//				member.setId(rs.getString("ID"));
+//				member.setPwd(rs.getString("PWD"));
+//				member.setNick(rs.getString("NICK"));
+//				member.setHp(rs.getString("HP"));
+//				member.setBirth(rs.getString("BIRTH"));
+//				member.setAddress(rs.getString("ADDRESS"));
+//				member.setEmail(rs.getString("EMAIL"));
+//				member.setQuitYn(rs.getString("QUIT_YN"));
+//				member.setJoinDate(rs.getTimestamp("JOIN_DATE").toLocalDateTime());
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//			throw new Exception("아이디로 회원정보를 조회하는 중 오류가 발생했습니다.");
+//		} finally {
+//			JDBCTemplate.close(rs);
+//			JDBCTemplate.close(pstmt);
+//		}
+//
+//		return member;
+//	}
 
 	//게시글이나 댓글 삭제
 	public void deleteAllPosts(Connection conn, String memberId) throws Exception {
