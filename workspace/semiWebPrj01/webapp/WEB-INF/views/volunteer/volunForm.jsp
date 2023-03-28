@@ -28,7 +28,7 @@
   </head>
 <body>
     
-		<%@include file="/WEB-INF/views/common/header.jsp"%>
+		<%@include file="/WEB-INF/views/common/header.jsp"%> 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   <!-- main 아래부터 작성 -->

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import com.kh.app.board.vo.AttachmentVo;
+import com.kh.app.board.vo.VolunPhotoVo;
 import com.kh.app.volun.service.VolunService;
 import com.kh.app.volun.vo.VolunVo;
 
@@ -86,7 +86,7 @@ public class VolunWriteController extends HttpServlet {
 		try {
 			// 파일정보 DB에 인서트 시작 (원본명, 변경된 이름)
 
-			AttachmentVo atVo = new AttachmentVo();
+			VolunPhotoVo atVo = new VolunPhotoVo();
 			atVo.setOriginName(OriginFileName);
 			atVo.setChangeName(fileName + ext);
 

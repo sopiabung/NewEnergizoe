@@ -2,7 +2,7 @@ package com.kh.app.volun.service;
 
 import java.sql.Connection;
 
-import com.kh.app.board.vo.AttachmentVo;
+import com.kh.app.board.vo.VolunPhotoVo;
 import com.kh.app.util.JDBCTemplate;
 import com.kh.app.volun.dao.VolunDao;
 import com.kh.app.volun.vo.VolunVo;
@@ -10,7 +10,7 @@ import com.kh.app.volun.vo.VolunVo;
 public class VolunService {
 
 	// 봉사자 모집 글 작성
-	public int write(VolunVo vo, AttachmentVo atVo) throws Exception {
+	public int write(VolunVo vo, VolunPhotoVo atVo) throws Exception {
 
 		// 비즈니스 로직
 		Connection conn = JDBCTemplate.getConnection();

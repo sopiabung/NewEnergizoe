@@ -3,7 +3,7 @@ package com.kh.app.volun.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import com.kh.app.board.vo.AttachmentVo;
+import com.kh.app.board.vo.VolunPhotoVo;
 import com.kh.app.volun.vo.VolunVo;
 
 public class VolunDao {
@@ -30,7 +30,7 @@ public class VolunDao {
 	}
 
 	// 사진 첨부
-	public int insertAttachment(Connection conn, AttachmentVo atVo) throws Exception {
+	public int insertAttachment(Connection conn, VolunPhotoVo atVo) throws Exception {
 
 		// SQL
 		String sql = "INSERT INTO ATTACHMENT (NO, ORIGIN_NAME, CHANGE_NAME, REF_BOARD_NO) VALUES(SEQ_ATTACHMENT_NO.NEXTVAL , ? , ? , SEQ_BOARD_NO.CURRVAL)";
