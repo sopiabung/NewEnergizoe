@@ -92,11 +92,7 @@
                                                     class="form-control" value="kh보호소 전화번호" required>
                                             </div>
 
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="address" name="contact-person" id="contact-person"
-                                                    pattern="" class="form-control"
-                                                    value="kh보호소 담당자" required>
-                                            </div>
+                                           
                                         </div>
 
                                         <input type="text" name="contact-company" id="contact-company"

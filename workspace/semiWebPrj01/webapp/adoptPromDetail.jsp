@@ -94,7 +94,7 @@
                         <div class="carousel-item active">
                             <svg class="bd-placeholder-img" width="100%" height="650px" aria-hidden="true"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" viewBox="0 0 2560 1600">
-                                <image href="KH-IMG/강아지2마리.jpg" width="100%" height="100%" />
+                                <image href="/resources/img/강아지2마리.jpg" width="100%" height="100%" />
                             </svg>
 
 
@@ -103,14 +103,14 @@
                         <div class="carousel-item">
                             <svg class="bd-placeholder-img" width="100%" height="650px" aria-hidden="true"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" viewBox="0 0 2560 1600">
-                                <image href="KH-IMG/화난 포메.jpg" width="100%" height="100%" />
+                                <image href="/resources/img/화난 포메.jpg" width="100%" height="100%" />
                             </svg>
 
                         </div>
                         <div class="carousel-item">
                             <svg class="bd-placeholder-img" width="100%" height="650px" aria-hidden="true"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" viewBox="0 0 2560 1600">
-                                <image href="KH-IMG/허스키5마리.jpg" width="100%" height="100%" />
+                                <image href="/resources/img/허스키5마리.jpg" width="100%" height="100%" />
                             </svg>
 
 

@@ -43,7 +43,7 @@
           <div class="carousel-caption text-start">
             <h1>사지말고 입양하세요</h1>
             <p>생명은 사고 파는게 아닙니다</p>
-            <p><a class="btn btn-lg btn-primary" href="#">입양하기</a></p>
+            <p><a class="btn btn-lg btn-primary" href="/app01/adoptPromForm2.jsp">입양하기</a></p>
           </div>
         </div>
       </div>
