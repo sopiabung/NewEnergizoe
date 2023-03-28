@@ -61,7 +61,7 @@
         </div>
 
         <div class="modal-body p-5 pt-0">
-          <form class="">
+          <form action="/app01/member/login" method="post">
             <div class="form-floating mb-3">
               <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="ID">
               <label for="floatingInput">ID</label>

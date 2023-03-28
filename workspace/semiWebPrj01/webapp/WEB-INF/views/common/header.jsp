@@ -72,8 +72,15 @@
     </nav>
 
     <div class="col-md-3 text-end">
-      <button type="button" class="btn btn-outline-primary me-2"><a style="text-decoration: none; color: blue;" href="/app01/login.jsp">로그인</a></button>
-      <button type="button" class="btn btn-primary"><a style="text-decoration: none; color: blue;" href="/app01/signup.jsp">회원가입</a></button>
+    	<c:if test="${loginMember != null }">
+    		${loginMember.nick}님 환영합니다.
+    		
+    	</c:if>
+    	
+    	<c:if test="${loginMember == null }">
+		      <button type="button" class="btn btn-outline-primary me-2"><a style="text-decoration: none; color: blue;" href="/app01/login.jsp">로그인</a></button>
+		      <button type="button" class="btn btn-primary"><a style="text-decoration: none; color: blue;" href="/app01/signup.jsp">회원가입</a></button>
+    	</c:if>
     </div>
 
 

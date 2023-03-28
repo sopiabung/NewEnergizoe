@@ -72,13 +72,22 @@
           </div> -->
 
       <div class="col-md-7 col-lg-8">
-        <form class="needs-validation" novalidate>
+        <form  action="${root}/member/join" method="post" class="needs-validation" novalidate>
           <div class="row g-3">
 
             <div class="col-12 input">
               <label for="id" class="form-label">아이디</label>
               <div class="input-group has-validation">
-                <input type="text" class="form-control" id="id" placeholder="id" required>
+                <input name="memberDiv"  type="text" class="form-control" id="id" placeholder="id" required>
+                <div class="invalid-feedback">
+                  회원구분
+                </div>
+              </div>
+            </div>
+            <div class="col-12 input">
+              <label for="id" class="form-label">아이디</label>
+              <div class="input-group has-validation">
+                <input name="memberId"  type="text" class="form-control" id="id" placeholder="id" required>
                 <div class="invalid-feedback">
                   아이디를 입력해주세요
                 </div>
@@ -87,7 +96,7 @@
 
             <div class="col-12 input">
               <label for="password" class="form-label">비밀번호<span class="text-muted"></span></label>
-              <input type="password" class="form-control" id="password" placeholder="password" required>
+              <input name="memberPwd" type="password" class="form-control" id="password" placeholder="password" required>
               <div class="invalid-feedback">
                 비밀번호를 입력해주세요.
               </div>
@@ -95,7 +104,7 @@
 
             <div class="col-12 input">
               <label for="password" class="form-label">비밀번호 확인<span class="text-muted"></span></label>
-              <input type="password" class="form-control" id="password-check" placeholder="password check" required>
+              <input  name="membwePwdre" type="password" class="form-control" id="password-check" placeholder="password check" required>
               <div class="invalid-feedback">
                 비밀번호를 한번 더 입력해주세요.
               </div>
@@ -103,7 +112,7 @@
 
             <div class="col-12 input">
               <label for="nick" class="form-label">닉네임<span class="text-muted"></span></label>
-              <input type="text" class="form-control" id="nick" placeholder="nick" required>
+              <input  name="memberNick"  type="text" class="form-control" id="nick" placeholder="nick" required>
               <div class="invalid-feedback">
                 닉네임을 입력해주세요.
               </div>
@@ -111,7 +120,7 @@
 
             <div class="col-12 input">
               <label for="name" class="form-label">이름<span class="text-muted"></span></label>
-              <input type="text" class="form-control" id="name" placeholder="name" required>
+              <input  name="memberName" type="text" class="form-control" id="name" placeholder="name" required>
               <div class="invalid-feedback">
                 이름을 입력해주세요.
               </div>
@@ -119,7 +128,7 @@
 
             <div class="col-12 input">
               <label for="phone" class="form-label">휴대전화 번호<span class="text-muted"></span></label>
-              <input type="text" class="form-control" id="phone" placeholder="01012341234" required>
+              <input name="memberHp" type="text" class="form-control" id="phone" placeholder="01012341234" required>
               <div class="invalid-feedback">
                 휴대폰번호를 00000000000 형식으로 입력해주세요.
                 ( 하이픈(-) 제외 )
@@ -128,7 +137,7 @@
 
             <div class="col-12 input">
               <label for="email" class="form-label">이메일 <span class="text-muted"></span></label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+              <input  name="memberEmail" type="email" class="form-control" id="email" placeholder="you@example.com" required>
               <div class="invalid-feedback">
                 이메일이 유효하지 않습니다.
               </div>
@@ -136,7 +145,7 @@
 
             <div class="col-12 input">
               <label for="birth" class="form-label">생년월일<span class="text-muted"></span></label>
-              <input type="text" class="form-control" id="birth" placeholder="19901231" required>
+              <input  name="memberBirth" type="text" class="form-control" id="birth" placeholder="19901231" required>
               <div class="invalid-feedback">
                 생년월일 숫자만 8개 입력해주세요.
               </div>
@@ -144,7 +153,7 @@
 
             <div class="col-12 input">
               <label for="address" class="form-label">주소</label>
-              <input type="text" class="form-control" id="address" placeholder="서울특별시 강남구 역삼동" required>
+              <input  name="memberAddress" type="text" class="form-control" id="address" placeholder="서울특별시 강남구 역삼동" required>
               <div class="invalid-feedback">
                 주소를 입력해주세요.
               </div>

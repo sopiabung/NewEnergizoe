@@ -15,9 +15,10 @@ public class MemberVo {
 	private String email;
 	private String quitYn;
 	private String joinDate;
-	
-	
-public int getNo() {
+	private String confirmPwd;
+
+
+	public int getNo() {
 		return no;
 	}
 
@@ -137,7 +138,7 @@ public int getNo() {
 	}
 
 
-@Override
+	@Override
 	public String toString() {
 		return "MemberVo [no=" + no + ", div=" + div + ", name=" + name + ", id=" + id + ", pwd=" + pwd + ", nick="
 				+ nick + ", hp=" + hp + ", birth=" + birth + ", address=" + address + ", email=" + email + ", quitYn="
@@ -145,7 +146,7 @@ public int getNo() {
 	}
 
 
-public MemberVo(int no, String div, String name, String id, String pwd, String nick, String hp, String birth,
+	public MemberVo(int no, String div, String name, String id, String pwd, String nick, String hp, String birth,
 			String address, String email, String quitYn, String joinDate) {
 		super();
 		this.no = no;
@@ -163,31 +164,49 @@ public MemberVo(int no, String div, String name, String id, String pwd, String n
 	}
 
 
-public MemberVo() {
+	public MemberVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 
 	//비밀번호 확인 메소드 추가..
-	public Object getPwdConfirm() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	public String getPwdConfirm() {
+//		if (!pwd.equals(confirmPwd)) {
+//			return "비밀번호와 비밀번호 확인이 일치하지 않습니다.";
+//		} else {
+//			return null;
+//		}
+//	}
+//	public String getPwdConfirm() {
+//              
+//        // 비밀번호 확인
+//        String pwd = vo.getPwd();
+//        String pwdConfirm = vo.getPwdConfirm();
+//        if (!pwd.equals(pwdConfirm)) {
+//            return 0; // 비밀번호가 일치하지 않을 경우 0 반환
+//        }
+//                
+//        return result;
+   
 
-
+	
 	public void setJoinDate(LocalDateTime localDateTime) {
-		 this.joinDate = joinDate;
-		
+		this.joinDate = joinDate;
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
