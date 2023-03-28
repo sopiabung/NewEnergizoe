@@ -63,11 +63,11 @@
         <div class="modal-body p-5 pt-0">
           <form action="/app01/member/login" method="post">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="ID">
+              <input name="memberId" type="text" class="form-control rounded-3" id="floatingInput" placeholder="ID">
               <label for="floatingInput">ID</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+              <input name="memberPwd" type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
               <label for="floatingPassword">Password</label>
             </div>
             <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Login</button>

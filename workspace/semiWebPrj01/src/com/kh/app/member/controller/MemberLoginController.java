@@ -49,8 +49,8 @@ public class MemberLoginController extends HttpServlet{
 			resp.sendRedirect("/app01");
 			System.out.println("ㅅㄱ");
 		}else {
-			req.getSession().setAttribute("alertMsg", "로그인 실패..");
-			resp.sendRedirect("/app01");
+			req.setAttribute("alertMsg", "로그인 실패..");
+			req.getRequestDispatcher("/WEB-INF/views/common/errorPage.jsp").forward(req, resp);
 			System.out.println("ㅅㅍ");
 			
 			
