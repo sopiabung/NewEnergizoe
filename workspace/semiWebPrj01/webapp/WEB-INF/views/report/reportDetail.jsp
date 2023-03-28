@@ -75,19 +75,18 @@
 
     <!-- Custom styles for this template -->
     <link href="headers.css" rel="stylesheet">
+    
 </head>
 
 <body>
 	<%@include file="/WEB-INF/views/common/header.jsp"%>
-
-    
 
         <!-- 게시글 부분 -->
         <div class="container post">
             <div class="row">
 
                 <div class="col-md-12 margin-left">
-                    <h1>신고<!--변수로 넣어서 신고 / 실종 / 보호로 분류 --> 동물 정보</h1>
+                    <h2>실종신고된 반려동물</h2>
                 </div>
 
                 <!-- 동물 사진 -->
@@ -97,24 +96,22 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
-                                preserveAspectRatio="xMidYMid slice" focusable="false" viewBox="0 0 2560 1600">
-                                <image href="KH-IMG/강아지2마리.jpg" width="100%" height="100%" />
+                                preserveAspectRatio="xMidYMid slice" focusable="false" >
+                                <img src="/resources/img/${boardVo.changeName}" alt="게시글이미지">
                             </svg>
-
-
                         
                         </div>
                         <div class="carousel-item">
                             <svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
-                                preserveAspectRatio="xMidYMid slice" focusable="false" viewBox="0 0 2000 1440">
-                                <image href="KH-IMG/화난 포메.jpg" width="100%" height="100%" />
+                                preserveAspectRatio="xMidYMid slice" focusable="false" >
+                                <img src="/resources/img/${boardVo.changeName}" alt="게시글이미지">
                             </svg>
 
                         </div>
                         <div class="carousel-item">
                             <svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
-                                preserveAspectRatio="xMidYMid slice" focusable="false" viewBox="0 0 3398 2550">
-                                <image href="KH-IMG/허스키5마리.jpg" width="100%" height="100%" />
+                                preserveAspectRatio="xMidYMid slice" focusable="false" >
+                                <img src="/resources/img/${boardVo.changeName}" alt="게시글이미지">
                             </svg>
 
 
@@ -137,7 +134,7 @@
                 <div class="col-md-6">
                     <!-- 동물이름 -->
                     <br>
-                    <h1>아기사자</h1>
+                    <h1>${animalinVo.name}</h1>
                     <hr>
 
                     <!-- 동물 능력치 -->
@@ -148,15 +145,15 @@
                             <h6><small>종 / 품종</small></h6>
                         </div>
                         <div class="col-md-6">
-                            <h6>개 / 포메라니안</h6>
+                            <h6>${animalinVo.specCode}</h6>
                         </div><br><br>
 
                         <!-- 동물성별 -->
                         <div class="col-md-6">
-                            <h6><small>성별 (중성화)</small></h6>
+                            <h6><small>성별</small></h6>
                         </div>
                         <div class="col-md-6">
-                            <h6>남 / O</h6>
+                            <h6>${animalinVo.gender}</h6>
                         </div><br><br>
 
                         <!-- 나이 -->
@@ -172,15 +169,15 @@
                             <h6><small>몸무게</small></h6>
                         </div>
                         <div class="col-md-6">
-                            <h6>2.6kg</h6>
+                            <h6>${animalinVo.weight}</h6>
                         </div><br><br>
 
                         <!-- 특징 ( 털색 , 꼬리 짧 , 김 등등) -->
                         <div class="col-md-6">
-                            <h6><small>털색</small></h6>
+                            <h6><small>특징</small></h6>
                         </div>
                         <div class="col-md-6">
-                            <h6>베이지</h6>
+                            <h6>${animalinVo.charcter}</h6>
                         </div><br><br>
                         <hr>
 
@@ -202,13 +199,7 @@
 
             </div>
             <div class="col-md-12 content-center post">
-                <h1>2023년 3월 21일 19시경쯤 뚝섬 한강공원에서 산책하다가 잃어버렸어요 ㅜㅠㅠ
-                    털색은 베이지에 꼬리는 자른듯이 짧아요
-                    친화력이 좋아서 모르는 사람에게도 잘가고
-                    배쪽에만 500원 동전만큼의 회색털이 나 있어요
-
-                </h1>
-
+                <h1>${ReportMisVo.content}</h1>
             </div>
         </div>
         <!-- 게시글 부분 -->

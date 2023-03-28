@@ -18,24 +18,25 @@
       
 
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    
+    
+    </style>
 
   </head>
 <body>
 	<%@include file="/WEB-INF/views/common/header.jsp"%>
-<main>
- 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   <!-- main 아래부터 작성 -->
   
-  
   <div class="container" style="margin-top:30px">
     <div class="row">
       <div class="col-sm-12">
-          <h2>실종/보호 신고</h2>
+          <h2>실종신고</h2>
           
-            <form action="writeAction" method = "POST" enctype="multipart/form-data">
-            <div class="form-group">
+            <form action="/app01/report/detail" method = "POST" enctype="multipart/form-data">
+            <!-- <div class="form-group">
               <label for="exampleSelect1" class="form-label mt-4">상태</label>
               <select class="form-select" id="exampleSelect1">
                 <option>전체</option>
@@ -44,16 +45,16 @@
                 <option>목격</option>
                 <option>완료</option>
               </select>
-            </div>
+            </div> -->
           </div>          
-          &nbsp          
+          &nbsp;          
           <div class="form-group">
-            <label for="usr" font-size>날짜</label>
+            <label for="usr" font-size>실종날짜</label>&emsp;
             <input type="date" >
           </div>
-          &nbsp
+          &nbsp;
           <div class="form-group">
-            <label for="exampleSelect1" class="form-label mt-4">지역</label>
+            <label for="exampleSelect1" class="form-label mt-4">실종지역</label>
             <select class="form-select" id="exampleSelect1">
               <option>강남구</option>
               <option>강동구</option>
@@ -81,24 +82,24 @@
               <option>중구</option>
               <option>중랑구</option>
             </select>
-            &nbsp
+          &nbsp;
           <div class="form-group">
-            <label for="usr">장소</label>
-            <input type="text" placeholder="구체적인 발견장소를 적어주세요." class="form-control" id="title" name = "title">
+            <label for="usr">실종장소</label>
+            <input type="text" placeholder="잃어버린 장소를 구체적으로 적어주세요." class="form-control" id="title" name = "title">
           </div>
-          &nbsp
+          &nbsp;
           <div class="form-group">
-            <label for="usr">아이디</label>
+            <label for="usr">보호자 이름</label>
             <input type="text" required class="form-control" id="title" name = "title">
           </div>
-          &nbsp
+          &nbsp;
           <div class="form-group">
-            <label for="usr">연락처</label>
+            <label for="usr">보호자 연락처</label>
             <input type="text" required class="form-control" id="title" name = "title">
           </div>
-          &nbsp
+          &nbsp;
           <!-- 동물정보 -->
-          <div class="form-group">
+          <div class="form-group" style="padding-bottom: 30px;">
             <label for="exampleSelect1" class="form-label mt-4">품종</label>
             <select class="form-select" id="exampleSelect1" >
               <option>강아지-전체</option>
@@ -169,16 +170,16 @@
               <option>기타</option>
             </select>
             <input type="text" placeholder="기타사항 선택시 품종을 적어주세요." class="form-control" id="title" name = "title">
-            &nbsp
+            &nbsp;
           <div class="form-group">
             <label for="usr">성별</label>
             
-            <div class="form-check">
+<!--              <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
               <label class="form-check-label" for="flexRadioDefault1">
                 미확인
               </label>              
-            </div>
+            </div> -->
             <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
               <label class="form-check-label" for="flexRadioDefault2">
@@ -191,18 +192,22 @@
                 수컷
               </label>              
             </div>
+            <hr>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" >
               <label class="form-check-label" for="flexRadioDefault2">
                 중성화완료
               </label>
             </div>
           </div>
-          &nbsp
+          &nbsp;
+           <div class="form-group">
+            <label for="usr">반려동물 이름</label>
+            <input type="text" class="form-control">
+           </div>&nbsp;
           <div class="form-group">
             <label for="usr">나이</label>
             <select class="form-select" id="exampleSelect1">
-              <option>나이모름</option>
               <option>1개월-3개월</option>
               <option>4개월-6개월</option>
               <option>7개월-9개월</option>
@@ -214,11 +219,10 @@
               <option>11년-13년</option>
               <option>14년 이상</option>
             </select>
-          </div>
+          </div>&nbsp;
           <div class="form-group">
             <label for="usr">몸무게</label>
             <select class="form-select" id="exampleSelect1">
-              <option>몸무게모름</option>
               <option>1kg미만</option>
               <option>1kg-3kg</option>
               <option>4kg-6kg</option>
@@ -229,39 +233,33 @@
               <option>20kg이상</option>            
             </select>            
           </div>
-          &nbsp
+          &nbsp;
           <div class="form-group">
             <label for="usr">털색</label>
             <input type="text" required placeholder="털색을 설명해주세요." class="form-control" id="title" name = "title">
           </div>
-          &nbsp
+          &nbsp;
           <div class="form-group">
             <label for="usr">특징</label>
             <input type="text" required placeholder="눈에 띄는 특징을 적어주세요." class="form-control" id="title" name = "title">
           </div>
-          &nbsp
+          &nbsp;
           <div class="form-outline mb-4">
           <label for="usr">내용</label>           
             <textarea class="form-control" id="textAreaExample6" rows="3" placeholder="기타사항을 입력해주세요." ></textarea>
             <label class="form-label" for="textAreaExample6"></label>
           </div>
-          &nbsp
           <div class="form-group">
             <label for="usr">사진파일첨부 (최대3장)</label>
           <br>          
             <input type="file" class="form-control-file border" name="file" >
             <input type="file" class="form-control-file border" name="file" >
+            <input type="file" class="form-control-file border" name="file" >
           </div>
           <br>
             <button  type="submit" class="btn btn-primary">등록하기</button>
-            <button  type="submit" class="btn btn-primary">목록으로</button>
-           
-          </form>
       </div>
     </div>
   </div>
-
-    
-
   </body>
 </html>

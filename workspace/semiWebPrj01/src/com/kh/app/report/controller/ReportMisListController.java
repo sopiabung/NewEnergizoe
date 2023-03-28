@@ -1,4 +1,4 @@
-package com.kh.app.reportmis.controller;
+package com.kh.app.report.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.reportmis.service.ReportMisService;
-import com.kh.app.reportmis.vo.ReportMisVo;
+import com.kh.app.report.service.ReportMisService;
+import com.kh.app.reports.vo.ReportMisVo;
 import com.kh.app.util.page.PageVo;
 
-@WebServlet("/reportMis/list")
+@WebServlet("/report/list")
 public class ReportMisListController extends HttpServlet{
 	
 	private ReportMisService rms = new ReportMisService();

@@ -1,4 +1,4 @@
-package com.kh.app.reportmis.vo;
+package com.kh.app.reports.vo;
 
 public class ReportMisVo {
 	
@@ -12,6 +12,8 @@ public class ReportMisVo {
 	private String writer;
 	private String sCode;
 	private String aniNo;
+	
+	
 	public ReportMisVo() {
 		super();
 		// TODO Auto-generated constructor stub
