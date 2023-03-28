@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.adopt.service.AdoptReviewService;
 import com.kh.app.adopt.vo.AdoptVo;
 
-@WebServlet("/adopt/adoptReviewDetail")
+@WebServlet("/adopt/review/detail")
 public class AdoptReviewDetailController extends HttpServlet {
 	
 	//입양후기상세

@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.kh.app.adopt.vo.AdoptReplyVo;
 import com.kh.app.adopt.vo.AdoptVo;
 import com.kh.app.util.JDBCTemplate;
 
@@ -91,6 +92,59 @@ public class AdoptReviewDao {
 		
 		return result;
 	}
+
+	//입양후기댓글목록
+	public List<AdoptReplyVo> replyList(Connection conn) throws Exception {
+		
+		//SQL (close)
+		String sql = "SELECT * FROM ADP_RE_CO WHERE DELETE_YN = 'N'";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		ResultSet rs = pstmt.executeQuery();
+		
+		
+		//rs -> obj (List<AdoptReplyVo>)
+		List<AdoptReplyVo> adrrList = new ArrayList<AdoptReplyVo>();
+		
+		while( rs.next() ) {
+			
+			String replyNo= rs.getString("REPLY_NO");
+			String replyEnrollDate= rs.getString("REPLY_ENROLL_DATE");
+			String replyContent= rs.getString("REPLY_CONTENT");
+			String writer= rs.getString("WRITER");
+			String adoptionNo2= rs.getString("ADOPTION_NO2");
+			
+			AdoptReplyVo vo = new AdoptReplyVo();
+			vo.setReplyNo(replyNo);
+			vo.setReplyEnrollDate(replyEnrollDate);
+			vo.setReplyContent(replyContent);
+			vo.setWriter(writer);
+			vo.setAdoptionNo2(adoptionNo2);
+			
+			adrrList.add(vo);
+		}
+		
+		return adrrList;
+
+	}
+	
+	//입양후기댓글작성
+	public int replywrite(Connection conn, AdoptReplyVo vo) throws Exception {
+		
+		
+		//SQL (close)
+		String sql = "INSERT INTO ADP_RE_CO(WRITER , REPLY_CONTENT) VALUES (SEQ_ADP_RE_CO_NO.NEXTVAL , ? )";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, vo.getWriter());
+		pstmt.setString(2, vo.getReplyContent());
+		int result = pstmt.executeUpdate();
+		
+		JDBCTemplate.close(pstmt);
+		
+		return result;
+		
+	}
+	
+	
 	
 	
 	

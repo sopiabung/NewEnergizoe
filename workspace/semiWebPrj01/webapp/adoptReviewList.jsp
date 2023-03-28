@@ -72,14 +72,33 @@
 <body>
  		<%@include file="/WEB-INF/views/common/header.jsp"%>
 
-  <div>
-    <h1>입양후기</h1>
-    <h3>입양 후기를 보실 수 있습니다
-      카라를 통해 입양하신 분들은 누구나! 입양후기를 올려주세요. 가족이 되어 즐겁게 지내시는 모습, 입양 전후 사진, 특이한 버릇, 입양 후 가장 좋은 점 등 입양을 망설이시거나 고민하시는 분들께 좋은 선물이 될 수 있습니다.
-      </h3>
-    <button type="button" class="btn btn-outline-secondary">글쓰기</button>
+    <!-- 입양 이미지 -->
+    <div>
+   
+    <!-- Image Slider -->
+ 	<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 
-  </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" viewBox="0 0 2560 1600">
+          <image href="resources/img/puppy.jpg" width="100%" height="100%" />
+        </svg>
+        
+
+        <div class="container" id="reviewmain">
+          <div class="carousel-caption text-start">
+            <h1>입양 후기</h1>
+             
+	            <c:if test="id != null">
+	           		 <p><a class="btn btn-lg btn-warning" style="background-color: #FCE593;" href="/app01/adoptReviewForm.jsp">후기작성하기</a></p>
+	            </c:if>
+           
+          </div>
+        </div>
+      </div>
+      
+     </div>
+    </div>
 
 
 
@@ -91,7 +110,7 @@
           
           <div class="col-md-3 img-size">
             <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
+              <img src="resources/img/화난 포메.jpg"
                 class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">도레미</h5>
@@ -103,7 +122,7 @@
 
           <div class="col-md-3 img-size">
             <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
+              <img src="resources/img/화난 포메.jpg"
                 class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">도레미</h5>
@@ -113,7 +132,7 @@
           </div>
           <div class="col-md-3 img-size">
             <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
+              <img src="resources/img/화난 포메.jpg"
                 class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">도레미</h5>
@@ -123,7 +142,7 @@
           </div>
           <div class="col-md-3 img-size">
             <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
+              <img src="resources/img/화난 포메.jpg"
                 class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">도레미</h5>
@@ -133,7 +152,7 @@
           </div>
           <div class="col-md-3 img-size">
             <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
+              <img src="resources/img/화난 포메.jpg"
                 class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">도레미</h5>
@@ -143,7 +162,7 @@
           </div>
           <div class="col-md-3 img-size">
             <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
+              <img src="resources/img/화난 포메.jpg"
                 class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">도레미</h5>
@@ -153,7 +172,7 @@
           </div>
           <div class="col-md-3 img-size">
             <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
+              <img src="resources/img/화난 포메.jpg"
                 class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">도레미</h5>
@@ -163,7 +182,7 @@
           </div>
           <div class="col-md-3 img-size">
             <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
+              <img src="resources/img/화난 포메.jpg"
                 class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">도레미</h5>
