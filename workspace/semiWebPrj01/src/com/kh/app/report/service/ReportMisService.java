@@ -1,11 +1,11 @@
-package com.kh.app.reportmis.service;
+package com.kh.app.report.service;
 
 import java.sql.Connection;
 import java.util.List;
 
-import com.kh.app.reportmis.dao.ReportMisDao;
-import com.kh.app.reportmis.vo.AttachmentVo;
-import com.kh.app.reportmis.vo.ReportMisVo;
+import com.kh.app.report.dao.ReportMisDao;
+import com.kh.app.reports.vo.AttachmentVo;
+import com.kh.app.reports.vo.ReportMisVo;
 import com.kh.app.util.JDBCTemplate;
 import com.kh.app.util.page.PageVo;
 

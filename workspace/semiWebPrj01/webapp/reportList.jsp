@@ -27,8 +27,6 @@
 
   <style>
 
-
-
     <!--여기부터 내가 만든-->
     .img-size {
       width: 100%;
@@ -47,15 +45,11 @@
       margin-bottom: 30px;
     }
 
-
-
     a {
       text-decoration: none;
       color: black;
       font-size: x-large;
     }
-
-
 
     .adopt-category {
       display: flex;
@@ -66,8 +60,12 @@
       border-radius: 60px;
       margin-bottom: 50px;
     }
-
-
+    
+    .btn {
+      background-color: #0081f3;
+      color: white;	
+    }
+   
   </style>
 
   <!-- Custom styles for this template -->
@@ -77,8 +75,6 @@
 <body>
 	<%@include file="/WEB-INF/views/common/header.jsp"%>
 
- 
-  
     <!-- 입양 이미지 -->
     <div>
    
@@ -94,9 +90,9 @@
 
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>사지말고 입양하세요</h1>
-            <p>생명은 사고 파는게 아니에요..</p>
-            <p><a class="btn btn-lg btn-outline-secondary" href="#">실종 글쓰기</a></p>
+            <h1>우리아이를 찾아주세요</h1>
+            <p>제보를 기다립니다</p>
+            <button class="btn btn-lg btn-outline-secondary" onclick="location.href='${root}/report/write'">실종신고하기</button>
           </div>
         </div>
       </div>
