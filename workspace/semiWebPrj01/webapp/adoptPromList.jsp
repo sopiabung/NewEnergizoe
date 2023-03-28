@@ -2,6 +2,8 @@
 <!doctype html>
 <html lang="en">
 
+
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,7 +63,10 @@
       border-radius: 60px;
       margin-bottom: 50px;
     }
-
+    #writeBtn {
+        margin-left: 70%;
+        margin-bottom: 30px;
+    }
 
   </style>
 
@@ -91,7 +96,11 @@
           <div class="carousel-caption text-start">
             <h1>사지말고 입양하세요</h1>
             <p>생명은 사고 파는게 아니에요..</p>
-            <p><a class="btn btn-lg btn-primary" href="#">입양하기</a></p>
+             
+	            <c:if test="id != null">
+	           		 <p><a class="btn btn-lg btn-primary" href="/app01/adoptPromForm2.jsp">입양하기</a></p>
+	            </c:if>
+           
           </div>
         </div>
       </div>
@@ -220,97 +229,33 @@
       <!-- 카테고리 토글 검색 끝 -->
 
       <!-- 게시글 목록 -->
+      <div class="col-md-3 text-end" id="writeBtn">
+        <button type="button" class="btn btn-outline me-2" style="background-color: #FCE593;" onclick="location.href='/app01/adoptPromForm.jsp' ">글쓰기</button>
+      </div>
+      
       <div class="container">
         <div class="row">
 
-          
-          <div class="col-md-3 img-size">
+          <c:forEach items="${adpList}" var="avo" >
+          	<div class="col-md-3 img-size" onclick="location.href='/adopt/prom/detail'">
             <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
+              <img src="resources/img/화난 포메.jpg"
                 class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">도레미</h5>
-                <p class="card-text"> <b>개 ( 포메라니안 )</b> <br> 남 ( 중성화 O ) <br> 2살 9개월 / 2.3kg / 베이지 </p>
+                <h5 class="card-title">${avo.title }</h5>
+                <p class="card-text"> <b>${avo.aniNo}</b> 
+                <br> ${avo.gender} ${avo.neutYnx} 
+                <br> ${avo.birthYear} / ${avo.weight} / ${avo.color} </p>
               </div>
             </div>
           </div>
-
-
-          <div class="col-md-3 img-size">
-            <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
-                class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">도레미</h5>
-                <p class="card-text"> <b>개 ( 포메라니안 )</b> <br> 남 ( 중성화 O ) <br> 2살 9개월 / 2.3kg / 베이지 </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 img-size">
-            <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
-                class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">도레미</h5>
-                <p class="card-text"> <b>개 ( 포메라니안 )</b> <br> 남 ( 중성화 O ) <br> 2살 9개월 / 2.3kg / 베이지 </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 img-size">
-            <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
-                class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">도레미</h5>
-                <p class="card-text"> <b>개 ( 포메라니안 )</b> <br> 남 ( 중성화 O ) <br> 2살 9개월 / 2.3kg / 베이지 </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 img-size">
-            <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
-                class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">도레미</h5>
-                <p class="card-text"> <b>개 ( 포메라니안 )</b> <br> 남 ( 중성화 O ) <br> 2살 9개월 / 2.3kg / 베이지 </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 img-size">
-            <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
-                class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">도레미</h5>
-                <p class="card-text"> <b>개 ( 포메라니안 )</b> <br> 남 ( 중성화 O ) <br> 2살 9개월 / 2.3kg / 베이지 </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 img-size">
-            <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
-                class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">도레미</h5>
-                <p class="card-text"> <b>개 ( 포메라니안 )</b> <br> 남 ( 중성화 O ) <br> 2살 9개월 / 2.3kg / 베이지 </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 img-size">
-            <div class="card">
-              <img src="KH-IMG/화난 포메.jpg"
-                class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">도레미</h5>
-                <p class="card-text"> <b>개 ( 포메라니안 )</b> <br> 남 ( 중성화 O ) <br> 2살 9개월 / 2.3kg / 베이지 </p>
-              </div>
-            </div>
-          </div>
-
+          </c:forEach>
           <!-- row div  -->
         </div>
         <!-- con div  -->
       </div>
+          
+          
       <!-- 게시글 목록 끝 -->
 
 	<%@include file="/WEB-INF/views/common/paging.jsp" %>

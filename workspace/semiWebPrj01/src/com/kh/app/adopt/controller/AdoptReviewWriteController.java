@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.adopt.service.AdoptReviewService;
 import com.kh.app.adopt.vo.AdoptVo;
 
-@WebServlet("/adopt/adoptReviewWrite")
+@WebServlet("/adopt/review/write")
 public class AdoptReviewWriteController extends HttpServlet {
 	
 	//입양후기게시글작성(화면)

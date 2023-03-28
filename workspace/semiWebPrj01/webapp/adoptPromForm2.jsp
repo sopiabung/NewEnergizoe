@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
     pageEncoding="UTF-8"%>
+
 <!doctype html>
 
-<%
-	pageContext.setAttribute("root", request.getContextPath());
-%>
+
 
 <html lang="en">
 
@@ -15,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>입양홍보/신청서 작성</title>
+    <title>입양신청서 작성</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -35,6 +34,7 @@
         .notice p{
             font-size: 10px;
         }
+
     </style>
 </head>
 
@@ -46,136 +46,25 @@
                 <div class="row">
 
                     <div class="col-lg-8 col-12 mx-auto">
-                        <h2 class="text-center mb-4">입양 게시글 작성</h2>
+                        <h2 class="text-center mb-4">입양 신청서 작성</h2>
 
                         <!-- 맨위에 버튼 네비게이션 -->
 
                         <nav class="d-flex justify-content-center">
                             <div class="nav nav-tabs align-items-baseline justify-content-center" id="nav-tab"
                                 role="tablist">
-                                <button class="nav-link active" id="nav-ContactForm-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-ContactForm" type="button" role="tab"
-                                    aria-controls="nav-ContactForm" aria-selected="false">
-                                    <h5>입양 등록</h5>
-                                </button>
+                              
 
-                                <button class="nav-link" id="nav-ContactMap-tab" data-bs-toggle="tab"
+                                <button class="nav-link " id="nav-ContactMap-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-ContactMap" type="button" role="tab"
                                     aria-controls="nav-ContactMap" aria-selected="false">
-                                    <h5>입양 신청서</h5>
+                                    <h5>입양 신청서(한번 더 생각하고 클릭해주세요.)</h5> 
                                 </button>
+                                
                             </div>
                         </nav>
 
-                        <!-- 보호소가 작성하는 입양등록 페이지 -->
-
-                        <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-ContactForm" role="tabpanel"
-                                aria-labelledby="nav-ContactForm-tab">
-                                <form class="custom-form contact-form mb-5 mb-lg-0" action="#" method="post"
-                                    role="form">
-                                    <div class="contact-form-body">
-                                        <div class="shlter_name">
-                                            <h6>보호소 정보</h6>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="text" name="contact-name" id="contact-name"
-                                                    class="form-control" value="kh보호소" required>
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="email" name="contact-email" id="contact-email"
-                                                    pattern="[^ @]*@[^ @]*" class="form-control"
-                                                    value="kh보호소 이메일" required>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="text" name="contact-name" id="contact-name"
-                                                    class="form-control" value="kh보호소 전화번호" required>
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="address" name="contact-person" id="contact-person"
-                                                    pattern="" class="form-control"
-                                                    value="kh보호소 담당자" required>
-                                            </div>
-                                        </div>
-
-                                        <input type="text" name="contact-company" id="contact-company"
-                                            class="form-control" value="kh보호소 주소" required>
-
-                                         <div class="animal_name">
-                                            <h6>동물 정보</h6>
-                                         </div>   
-                                         <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <div class="form-check form-control" style="border-color: white;">
-                                                    <input class="form-check-input" type="radio" name="animalForm"
-                                                        id="flexRadioDefault1">
-                                                    <label class="form-check-label" for="flexRadioDefault1">
-                                                        강아지
-                                                    </label>
-                                                </div>
-                                            </div>
-            
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <div class="form-check form-control" style="border-color: white;">
-                                                    <input class="form-check-input" type="radio" name="animalForm"
-                                                        id="flexRadioDefault2">
-                                                    <label class="form-check-label" for="flexRadioDefault2">
-                                                        고양이
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                       
-                                        <input type="text" name="contact-company" id="contact-company"
-                                            class="form-control" placeholder="이름" required>
-                                        <input type="text" name="contact-company" id="contact-company"
-                                            class="form-control" placeholder="성별" required>
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <div class="form-check form-control" style="border-color: white;">
-                                                        <input class="form-check-input" type="radio" name="animalForm"
-                                                            id="flexRadioDefault1">
-                                                        <label class="form-check-label" for="flexRadioDefault1">
-                                                            중성화 O
-                                                        </label>
-                                                    </div>
-                                                </div>
-                
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <div class="form-check form-control" style="border-color: white;">
-                                                        <input class="form-check-input" type="radio" name="animalForm"
-                                                            id="flexRadioDefault2">
-                                                        <label class="form-check-label" for="flexRadioDefault2">
-                                                            중성화 X
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <input type="text" name="contact-company" id="contact-company"
-                                            class="form-control" placeholder="추정나이" required>
-                                        <input type="text" name="contact-company" id="contact-company"
-                                            class="form-control" placeholder="몸무게" required>   
-                                        <input type="text" name="contact-company" id="contact-company"
-                                            class="form-control" placeholder="털색" required>    
-                                        <input type="text" name="contact-company" id="contact-company"
-                                            class="form-control" placeholder="친화도" required> 
-                                            
-
-                                        <textarea name="contact-message" rows="3" class="form-control"
-                                            id="contact-message" placeholder="기타사항"></textarea>
-
-                                        <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                                            <button type="submit" class="form-control" style="background-color: #FCE593;"><b>등록하기</b></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                        
 
 
                             <!-- ------입양신청서------- -->

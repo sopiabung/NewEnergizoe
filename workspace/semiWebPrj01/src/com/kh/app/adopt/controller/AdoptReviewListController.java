@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.adopt.service.AdoptReviewService;
 import com.kh.app.adopt.vo.AdoptVo;
 
-@WebServlet("/adopt/adoptReviewList")
+@WebServlet("/adopt/review/list")
 public class AdoptReviewListController extends HttpServlet {
 	
 	//입양후기목록

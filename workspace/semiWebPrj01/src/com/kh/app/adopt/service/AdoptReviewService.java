@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import com.kh.app.adopt.dao.AdoptReviewDao;
+import com.kh.app.adopt.vo.AdoptReplyVo;
 import com.kh.app.adopt.vo.AdoptVo;
 import com.kh.app.util.JDBCTemplate;
 
@@ -60,7 +61,7 @@ public class AdoptReviewService {
 		
 		//tx , close
 		if(result == 1) {
-			JDBCTemplate.commit(conn);
+			JDBCTemplate.commit(conn); 
 		}else {
 			JDBCTemplate.rollback(conn);
 		}
@@ -69,5 +70,50 @@ public class AdoptReviewService {
 		
 		return result;
 	}
+
+	//입양후기댓글목록
+	public List<AdoptReplyVo> replyList() throws Exception {
+		
+		//비즈니스 로직
+		
+		//conn
+		Connection conn = JDBCTemplate.getConnection();
+		
+		//SQL (DAO)
+		AdoptReviewDao dao = new AdoptReviewDao();
+		List<AdoptReplyVo> adrrList = dao.replyList(conn);
+		
+		//close
+		JDBCTemplate.close(conn);
+		
+		return adrrList;
+	}
+	
+	//입양후기댓글작성
+	public int replywrite(AdoptReplyVo vo) throws Exception {
+		
+		//비즈니스 로직
+		
+		//conn
+		Connection conn = JDBCTemplate.getConnection();
+				
+		
+		//SQL (DAO)
+		AdoptReviewDao dao = new AdoptReviewDao();
+		int result = dao.replywrite(conn , vo);
+		
+		//tx , close
+		if(result == 1) {
+			JDBCTemplate.commit(conn); 
+		}else {
+			JDBCTemplate.rollback(conn);
+		}
+		
+		JDBCTemplate.close(conn);
+		
+		return result;
+	}
+	
+	
 	
 }//class

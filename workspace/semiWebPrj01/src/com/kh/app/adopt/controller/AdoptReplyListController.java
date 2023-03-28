@@ -9,42 +9,39 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.adopt.service.AdoptPromService;
-import com.kh.app.adopt.vo.AdoptVo;
+import com.kh.app.adopt.service.AdoptReviewService;
+import com.kh.app.adopt.vo.AdoptReplyVo;
 
-@WebServlet("/adopt/prom/list")
-public class AdoptPromListController extends HttpServlet {
+@WebServlet("/adopt/review/replylist")
+public class AdoptReplyListController extends HttpServlet {
 	
-	//입양홍보목록 
+	//리플
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		//데이터 꺼내기
 		
-		//데이터 뭉치기
-		
-		List<AdoptVo> adpList = null;
+		List<AdoptReplyVo> adrrList = null;
 		try {
 			//서비스 호출
-			AdoptPromService aps = new AdoptPromService();
-			adpList = aps.promList();
-			
+			AdoptReviewService arrs = new AdoptReviewService();
+			adrrList = arrs.replyList();
 		}catch(Exception e) {
-			System.out.println("[ERROR] 게시글 조회 중 예외 발생 ..."); 
+			System.out.println("[ERROR] 댓글 조회 중 예외발생 ...");
 			e.printStackTrace();
 		}
 		
 		
+		
 		//화면
-		req.setAttribute("adpList", adpList);
-		req.getRequestDispatcher("/WEB-INF/views/adopt/adoptPromList.jsp").forward(req, resp);
-	}
-	
-	//입양홍보목록
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doGet(req, resp);
+		req.setAttribute("adrrList", adrrList);
+		req.getRequestDispatcher("/WEB-INF/views/adopt/adoptReviewDetail.jsp").forward(req, resp);
 		
 	}
 	
-}//class
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doGet(req, resp);
+	}
+	
+	
+}

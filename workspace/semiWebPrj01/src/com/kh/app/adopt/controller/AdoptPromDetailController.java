@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.adopt.service.AdoptPromService;
 import com.kh.app.adopt.vo.AdoptVo;
 
-@WebServlet("/adopt/adoptPromDetail")
+@WebServlet("/adopt/prom/detail")
 public class AdoptPromDetailController extends HttpServlet {
 	
 	//입양홍보상세

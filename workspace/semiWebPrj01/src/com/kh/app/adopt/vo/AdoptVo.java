@@ -17,6 +17,11 @@ public class AdoptVo {
 	private String replyContent;
 	private String writer;
 	private String adoptionNo2;
+	private String neutYnx;
+	private String gender;
+	private String birthYear;
+	private String weight;
+	private String color;
 	
 	public String getAdpNo() {
 		return adpNo;
@@ -108,17 +113,49 @@ public class AdoptVo {
 	public void setAdoptionNo2(String adoptionNo2) {
 		this.adoptionNo2 = adoptionNo2;
 	}
+	public String getNeutYnx() {
+		return neutYnx;
+	}
+	public void setNeutYnx(String neutYnx) {
+		this.neutYnx = neutYnx;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getBirthYear() {
+		return birthYear;
+	}
+	public void setBirthYear(String birthYear) {
+		this.birthYear = birthYear;
+	}
+	public String getWeight() {
+		return weight;
+	}
+	public void setWeight(String weight) {
+		this.weight = weight;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
 	@Override
 	public String toString() {
 		return "AdoptVo [adpNo=" + adpNo + ", title=" + title + ", content=" + content + ", enrollDate=" + enrollDate
 				+ ", delYn=" + delYn + ", enterDate=" + enterDate + ", memberNo=" + memberNo + ", shelterNo="
 				+ shelterNo + ", aniNo=" + aniNo + ", adpDate=" + adpDate + ", replyNo=" + replyNo
 				+ ", replyEnrollDate=" + replyEnrollDate + ", replyContent=" + replyContent + ", writer=" + writer
-				+ ", adoptionNo2=" + adoptionNo2 + "]";
+				+ ", adoptionNo2=" + adoptionNo2 + ", neutYnx=" + neutYnx + ", gender=" + gender + ", birthYear="
+				+ birthYear + ", weight=" + weight + ", color=" + color + "]";
 	}
 	public AdoptVo(String adpNo, String title, String content, String enrollDate, String delYn, String enterDate,
 			String memberNo, String shelterNo, String aniNo, String adpDate, String replyNo, String replyEnrollDate,
-			String replyContent, String writer, String adoptionNo2) {
+			String replyContent, String writer, String adoptionNo2, String neutYnx, String gender, String birthYear,
+			String weight, String color) {
 		super();
 		this.adpNo = adpNo;
 		this.title = title;
@@ -135,10 +172,17 @@ public class AdoptVo {
 		this.replyContent = replyContent;
 		this.writer = writer;
 		this.adoptionNo2 = adoptionNo2;
+		this.neutYnx = neutYnx;
+		this.gender = gender;
+		this.birthYear = birthYear;
+		this.weight = weight;
+		this.color = color;
 	}
 	public AdoptVo() {
 
 	}
+	
+	
 	
 	
 	
