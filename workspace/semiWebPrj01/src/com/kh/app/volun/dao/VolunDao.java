@@ -7,7 +7,7 @@ import com.kh.app.board.vo.VolunPhotoVo;
 import com.kh.app.volun.vo.VolunVo;
 
 public class VolunDao {
-
+ 
 	// 봉사자 모집 글 작성
 	public int write(Connection conn, VolunVo vo) throws Exception {
 

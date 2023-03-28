@@ -19,7 +19,7 @@ import com.kh.app.volun.vo.VolunVo;
 
 //봉사자 모집 글 작성
 @WebServlet("/volun/write")
-public class VolunWriteController extends HttpServlet {
+public class VolunWriteController extends HttpServlet { 
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
