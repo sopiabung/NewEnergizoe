@@ -21,7 +21,7 @@
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
   </head>
-resources/img/puppy.jpg
+
   <body>
   <%@include file="/WEB-INF/views/common/header.jsp"%>
 

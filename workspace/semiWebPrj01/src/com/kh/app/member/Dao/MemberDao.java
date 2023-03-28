@@ -13,27 +13,24 @@ public class MemberDao {
 	public int join(Connection conn, MemberVo vo) throws Exception {
 
 		//SQL실행 , close
-		String sql = "INSERT INTO MEMBER(NO, DIV, NAME, ID, PWD, NICK, HP, BIRTH, ADDRESS, EMAIL, QUIT_YN,JOIN_DATE) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO MEMBER(NO, DIV ,  NAME, ID, PWD, NICK, HP, BIRTH, ADDRESS, EMAIL) VALUES(SEQ_MEMBER_NO.NEXTVAL,?,?,?,?,?,?,?,?,?)";
 
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setInt(1, vo.getNo());
-		pstmt.setString(2, vo.getDiv());
-		pstmt.setString(3, vo.getName());
-		pstmt.setString(4, vo.getId());
-		pstmt.setString(5, vo.getPwd());
-		pstmt.setString(6, vo.getNick());
-		pstmt.setString(7, vo.getHp());
-		pstmt.setString(8, vo.getBirth());
-		pstmt.setString(9, vo.getAddress());
-		pstmt.setString(10, vo.getEmail());
-		pstmt.setString(11, vo.getQuitYn());
-		pstmt.setString(12, vo.getJoinDate());
+		pstmt.setString(1, vo.getDiv()); 
+		pstmt.setString(2, vo.getName()); //
+		pstmt.setString(3, vo.getId());
+		pstmt.setString(4, vo.getPwd());
+		pstmt.setString(5, vo.getNick());
+		pstmt.setString(6, vo.getHp()); //
+		pstmt.setString(7, vo.getBirth());
+		pstmt.setString(8, vo.getAddress());
+		pstmt.setString(9, vo.getEmail());
 		int result = pstmt.executeUpdate();
 
 		JDBCTemplate.close(pstmt);
 
+		System.out.println(vo);
 		return result;
-
 	}
 	//로그인
 	public MemberVo login(Connection conn, MemberVo vo) throws Exception {
