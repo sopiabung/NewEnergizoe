@@ -1,6 +1,6 @@
-package com.kh.app.v.vo;
+package com.kh.app.volun.vo;
 
-public class VVo {
+public class VolunVo {
 
 	private String volNo;
 	private String shelNo;
@@ -19,7 +19,7 @@ public class VVo {
 				+ ", volDate=" + volDate + "]";
 	}
 	
-	public VVo(String volNo, String shelNo, String type, String enrollDate, String endTime, String needPeople,
+	public VolunVo(String volNo, String shelNo, String type, String enrollDate, String endTime, String needPeople,
 			String content, String delYn, String volDate) {
 		super();
 		this.volNo = volNo;
@@ -33,7 +33,7 @@ public class VVo {
 		this.volDate = volDate;
 	}
 	
-	public VVo() {
+	public VolunVo() {
 		super();
 	}
 	

@@ -1,17 +1,17 @@
 package com.kh.app.board.vo;
 
-public class AttachmentVo {
+public class MisPhotoVo {
 
 	private String no;
 	private String originName;
 	private String changeName;
 	private String refBoardNo;
-
-	public AttachmentVo() {
+	
+	public MisPhotoVo() {
 		super();
 	}
-
-	public AttachmentVo(String no, String originName, String changeName, String refBoardNo) {
+	
+	public MisPhotoVo(String no, String originName, String changeName, String refBoardNo) {
 		super();
 		this.no = no;
 		this.originName = originName;
@@ -21,40 +21,33 @@ public class AttachmentVo {
 
 	@Override
 	public String toString() {
-		return "AttachmentVo [no=" + no + ", originName=" + originName + ", changeName=" + changeName + ", refBoardNo="
+		return "FreePhoto [no=" + no + ", originName=" + originName + ", changeName=" + changeName + ", refBoardNo="
 				+ refBoardNo + "]";
 	}
-
+	
 	public String getNo() {
 		return no;
 	}
-
-	public String getOriginName() {
-		return originName;
-	}
-
-	public String getChangeName() {
-		return changeName;
-	}
-
-	public String getRefBoardNo() {
-		return refBoardNo;
-	}
-
 	public void setNo(String no) {
 		this.no = no;
 	}
-
+	public String getOriginName() {
+		return originName;
+	}
 	public void setOriginName(String originName) {
 		this.originName = originName;
 	}
-
+	public String getChangeName() {
+		return changeName;
+	}
 	public void setChangeName(String changeName) {
 		this.changeName = changeName;
 	}
-
+	public String getRefBoardNo() {
+		return refBoardNo;
+	}
 	public void setRefBoardNo(String refBoardNo) {
 		this.refBoardNo = refBoardNo;
 	}
-
+	
 }
