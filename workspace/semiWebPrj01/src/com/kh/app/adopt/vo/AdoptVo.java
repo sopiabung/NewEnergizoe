@@ -1,5 +1,7 @@
 package com.kh.app.adopt.vo;
 
+import com.kh.app.member.vo.MemberVo;
+
 public class AdoptVo {
 	
 	private String adpNo;
@@ -7,21 +9,15 @@ public class AdoptVo {
 	private String content;
 	private String enrollDate;
 	private String delYn;
+	private String adpDate;
 	private String enterDate;
 	private String memberNo;
 	private String shelterNo;
 	private String aniNo;
-	private String adpDate;
-	private String replyNo;
-	private String replyEnrollDate;
-	private String replyContent;
-	private String writer;
-	private String adoptionNo2;
-	private String neutYnx;
-	private String gender;
-	private String birthYear;
-	private String weight;
-	private String color;
+	private String name;
+	private String hp;
+	private String address;
+	private String email;
 	
 	public String getAdpNo() {
 		return adpNo;
@@ -53,6 +49,12 @@ public class AdoptVo {
 	public void setDelYn(String delYn) {
 		this.delYn = delYn;
 	}
+	public String getAdpDate() {
+		return adpDate;
+	}
+	public void setAdpDate(String adpDate) {
+		this.adpDate = adpDate;
+	}
 	public String getEnterDate() {
 		return enterDate;
 	}
@@ -77,110 +79,61 @@ public class AdoptVo {
 	public void setAniNo(String aniNo) {
 		this.aniNo = aniNo;
 	}
-	public String getAdpDate() {
-		return adpDate;
+	public String getName() {
+		return name;
 	}
-	public void setAdpDate(String adpDate) {
-		this.adpDate = adpDate;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getReplyNo() {
-		return replyNo;
+	public String getHp() {
+		return hp;
 	}
-	public void setReplyNo(String replyNo) {
-		this.replyNo = replyNo;
+	public void setHp(String hp) {
+		this.hp = hp;
 	}
-	public String getReplyEnrollDate() {
-		return replyEnrollDate;
+	public String getAddress() {
+		return address;
 	}
-	public void setReplyEnrollDate(String replyEnrollDate) {
-		this.replyEnrollDate = replyEnrollDate;
+	public void setAddress(String address) {
+		this.address = address;
 	}
-	public String getReplyContent() {
-		return replyContent;
+	public String getEmail() {
+		return email;
 	}
-	public void setReplyContent(String replyContent) {
-		this.replyContent = replyContent;
-	}
-	public String getWriter() {
-		return writer;
-	}
-	public void setWriter(String writer) {
-		this.writer = writer;
-	}
-	public String getAdoptionNo2() {
-		return adoptionNo2;
-	}
-	public void setAdoptionNo2(String adoptionNo2) {
-		this.adoptionNo2 = adoptionNo2;
-	}
-	public String getNeutYnx() {
-		return neutYnx;
-	}
-	public void setNeutYnx(String neutYnx) {
-		this.neutYnx = neutYnx;
-	}
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-	public String getBirthYear() {
-		return birthYear;
-	}
-	public void setBirthYear(String birthYear) {
-		this.birthYear = birthYear;
-	}
-	public String getWeight() {
-		return weight;
-	}
-	public void setWeight(String weight) {
-		this.weight = weight;
-	}
-	public String getColor() {
-		return color;
-	}
-	public void setColor(String color) {
-		this.color = color;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	@Override
 	public String toString() {
 		return "AdoptVo [adpNo=" + adpNo + ", title=" + title + ", content=" + content + ", enrollDate=" + enrollDate
-				+ ", delYn=" + delYn + ", enterDate=" + enterDate + ", memberNo=" + memberNo + ", shelterNo="
-				+ shelterNo + ", aniNo=" + aniNo + ", adpDate=" + adpDate + ", replyNo=" + replyNo
-				+ ", replyEnrollDate=" + replyEnrollDate + ", replyContent=" + replyContent + ", writer=" + writer
-				+ ", adoptionNo2=" + adoptionNo2 + ", neutYnx=" + neutYnx + ", gender=" + gender + ", birthYear="
-				+ birthYear + ", weight=" + weight + ", color=" + color + "]";
+				+ ", delYn=" + delYn + ", adpDate=" + adpDate + ", enterDate=" + enterDate + ", memberNo=" + memberNo
+				+ ", shelterNo=" + shelterNo + ", aniNo=" + aniNo + ", name=" + name + ", hp=" + hp + ", address="
+				+ address + ", email=" + email + "]";
 	}
-	public AdoptVo(String adpNo, String title, String content, String enrollDate, String delYn, String enterDate,
-			String memberNo, String shelterNo, String aniNo, String adpDate, String replyNo, String replyEnrollDate,
-			String replyContent, String writer, String adoptionNo2, String neutYnx, String gender, String birthYear,
-			String weight, String color) {
+	public AdoptVo(String adpNo, String title, String content, String enrollDate, String delYn, String adpDate,
+			String enterDate, String memberNo, String shelterNo, String aniNo, String name, String hp, String address,
+			String email) {
 		super();
 		this.adpNo = adpNo;
 		this.title = title;
 		this.content = content;
 		this.enrollDate = enrollDate;
 		this.delYn = delYn;
+		this.adpDate = adpDate;
 		this.enterDate = enterDate;
 		this.memberNo = memberNo;
 		this.shelterNo = shelterNo;
 		this.aniNo = aniNo;
-		this.adpDate = adpDate;
-		this.replyNo = replyNo;
-		this.replyEnrollDate = replyEnrollDate;
-		this.replyContent = replyContent;
-		this.writer = writer;
-		this.adoptionNo2 = adoptionNo2;
-		this.neutYnx = neutYnx;
-		this.gender = gender;
-		this.birthYear = birthYear;
-		this.weight = weight;
-		this.color = color;
+		this.name = name;
+		this.hp = hp;
+		this.address = address;
+		this.email = email;
 	}
 	public AdoptVo() {
-
+		super();
+		// TODO Auto-generated constructor stub
 	}
+	
 	
 	
 	

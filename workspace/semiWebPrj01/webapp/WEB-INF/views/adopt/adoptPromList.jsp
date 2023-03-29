@@ -97,7 +97,7 @@
             <h1>사지말고 입양하세요</h1>
             <p>생명은 사고 파는게 아니에요..</p>
              
-	            <c:if test="id != null">
+	            <c:if test="${adpList} != null">
 	           		 <p><a class="btn btn-lg btn-primary" href="/app01/adoptPromForm2.jsp">입양하기</a></p>
 	            </c:if>
            
@@ -230,7 +230,7 @@
 
       <!-- 게시글 목록 -->
       <div class="col-md-3 text-end" id="writeBtn">
-        <button type="button" class="btn btn-outline me-2" style="background-color: #FCE593;" onclick="location.href='/app01/adoptPromForm.jsp' ">글쓰기</button>
+        <button type="button" class="btn btn-outline me-2" style="background-color: #FCE593;" onclick="location.href='/app01/adopt/write'">글쓰기</button>
       </div>
       
       <div class="container">
