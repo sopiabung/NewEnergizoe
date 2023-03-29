@@ -123,6 +123,8 @@ public class MemberService {
 		MemberDao dao = new MemberDao();
 		int result = dao.edit(conn , vo);
 		
+		System.out.println(result);
+		
 		if(result == 1) {
 			JDBCTemplate.commit(conn);
 		}else {
