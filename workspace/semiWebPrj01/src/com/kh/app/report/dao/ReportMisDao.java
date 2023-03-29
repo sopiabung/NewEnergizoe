@@ -7,9 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.kh.app.board.vo.AnimalinVo;
 import com.kh.app.board.vo.MisPhotoVo;
-import com.kh.app.reports.vo.ReportMisVo;
+import com.kh.app.report.vo.ReportMisVo;
 import com.kh.app.util.JDBCTemplate;
 
 
@@ -20,7 +19,7 @@ public class ReportMisDao {
 		
 		
 		//SQL(close)
-		String sql = "SELECT * FROM MIS_BO WHERE DEL_YN = 'N'";
+		String sql = "SELECT B.REPORT_NO , B.TITLE , B.CONTENT , B.ENROLL_DATE , B.MIS_DATE , B.AREA , B.WRITER , M.NICK FROM MIS_BO B JOIN MEMBER M ON B.WRITER = M.NO WHERE B.DEL_YN = 'N'";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
 		
@@ -35,9 +34,7 @@ public class ReportMisDao {
 			String enrollDate = rs.getString("ENROLL_DATE");
 			String misDate = rs.getString("MIS_DATE");
 			String area = rs.getString("AREA");
-			String writer = rs.getString("WRITER");
-			//String sCode = rs.getString("S_CODE");
-			//String aniNo = rs.getString("ANI_NO"); //동물정보는 안가져옴 일단 게시글부터
+			String writer = rs.getString("NICK");
 			
 			ReportMisVo vo = new ReportMisVo();
 			vo.setReportNo(reportNo);
@@ -47,15 +44,29 @@ public class ReportMisDao {
 			vo.setMisDate(misDate);
 			vo.setArea(area);
 			vo.setWriter(writer);
-			//vo.setsCode(sCode);
-			//vo.setAniNo(aniNo);
-			
 			
 			ReportMisList.add(vo);		
 		}
 		
 		return ReportMisList;
 	}
-	
+
+	//게시글 작성
+	public int write(Connection conn, ReportMisVo vo) throws Exception {
+		
+		//SQL (close)
+		String sql ="INSERT INTO MIS_BO (REPORT_NO, TITLE , CONTENT, MIS_DATE, AREA, WRITER) VALUES (SEQ_MIS_BO_REPORT_NO.NEXTVAL, ? , ? , ? , ? , ? )";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, vo.getTitle());
+		pstmt.setString(2, vo.getContent());
+		pstmt.setString(3, vo.getMisDate());
+		pstmt.setString(4, vo.getArea());
+		pstmt.setString(5, vo.getWriter());
+		int result = pstmt.executeUpdate();
+		
+		JDBCTemplate.close(pstmt);
+		
+		return result;
+	}
 	
 }//class
