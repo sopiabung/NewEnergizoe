@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import com.kh.app.notice.service.NoticeService;
-import com.kh.app.notice.vo.NoticeAttachmentVo;
 import com.kh.app.notice.vo.NoticeVo;
 
 @MultipartConfig(maxFileSize = 1024 * 1024 * 50, // 파일 하나당 크기
