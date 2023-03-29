@@ -26,10 +26,10 @@ public class ReportMisDetailController extends HttpServlet{
 			
 			//서비스 호출
 			ReportMisService rms = new ReportMisService();
-			ReportMisVo vo = rms.selectOne(reportNo);
+			//ReportMisVo vo = rms.selectOne(reportNo);
 			
 			//화면
-			req.setAttribute("ReportMisVo" , vo);
+			//req.setAttribute("ReportMisVo" , vo);
 			req.getRequestDispatcher("/WEB-INF/views/report/reportDetail.jsp").forward(req, resp);
 			
 		}catch (Exception e){

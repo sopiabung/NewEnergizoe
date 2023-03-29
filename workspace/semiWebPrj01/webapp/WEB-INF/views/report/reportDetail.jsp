@@ -60,8 +60,9 @@
         }
 
         .adopt-btn {
-            width: 100%;
-            height: 74px;
+            width: 30%;
+            height: 50px;
+            display: inline-block;
         }
 
         .content-center {
@@ -185,8 +186,9 @@
 
                         <!-- 입양하기 버튼 -->
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md" style="text-align: center;">
                                 <button class="btn btn-primary adopt-btn">작성자와 채팅</button>
+		                        <button class="btn btn-primary adopt-btn" >목록으로</button>
                             </div>
                         </div>
 

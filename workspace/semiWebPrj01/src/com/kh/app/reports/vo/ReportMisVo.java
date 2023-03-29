@@ -10,8 +10,8 @@ public class ReportMisVo {
 	private String misDate;
 	private String area;
 	private String writer;
-	private String sCode;
-	private String aniNo;
+	//private String sCode;
+	//private String aniNo;
 	
 	
 	public ReportMisVo() {
@@ -19,7 +19,7 @@ public class ReportMisVo {
 		// TODO Auto-generated constructor stub
 	}
 	public ReportMisVo(String reportNo, String title, String content, String enrollDate, String delYn, String misDate,
-			String area, String writer, String sCode, String aniNo) {
+			String area, String writer) {
 		super();
 		this.reportNo = reportNo;
 		this.title = title;
@@ -29,14 +29,14 @@ public class ReportMisVo {
 		this.misDate = misDate;
 		this.area = area;
 		this.writer = writer;
-		this.sCode = sCode;
-		this.aniNo = aniNo;
+		//this.sCode = sCode;
+		//this.aniNo = aniNo;
 	}
 	@Override
 	public String toString() {
 		return "ReportMisVo [reportNo=" + reportNo + ", title=" + title + ", content=" + content + ", enrollDate="
 				+ enrollDate + ", delYn=" + delYn + ", misDate=" + misDate + ", area=" + area + ", writer=" + writer
-				+ ", sCode=" + sCode + ", aniNo=" + aniNo + "]";
+				+ "]";
 	}
 	public String getReportNo() {
 		return reportNo;
@@ -86,16 +86,5 @@ public class ReportMisVo {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public String getsCode() {
-		return sCode;
-	}
-	public void setsCode(String sCode) {
-		this.sCode = sCode;
-	}
-	public String getAniNo() {
-		return aniNo;
-	}
-	public void setAniNo(String aniNo) {
-		this.aniNo = aniNo;
-	}
+	
 }
