@@ -241,7 +241,7 @@
 
             <hr class="lasthr">
             <div class=" d-flex justify-content-end write-btn">
-              <button class="btn btn-primary vol-btn">글 작성하기</button>
+              <button class="btn btn-primary vol-btn" onclick="location.href='${root}/volun/write'">글 작성하기</button>
             </div>
 
             
