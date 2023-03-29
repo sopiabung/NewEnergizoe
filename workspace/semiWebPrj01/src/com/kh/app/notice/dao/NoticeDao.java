@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import com.kh.app.notice.vo.NoticeAttachmentVo;
 import com.kh.app.notice.vo.NoticeVo;
 import com.kh.app.util.JDBCTemplate;
 import com.kh.app.util.page.PageVo;

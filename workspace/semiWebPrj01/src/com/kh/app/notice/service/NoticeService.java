@@ -3,7 +3,6 @@ package com.kh.app.notice.service;
 import java.sql.Connection;
 import java.util.List;
 import com.kh.app.notice.dao.NoticeDao;
-import com.kh.app.notice.vo.NoticeAttachmentVo;
 import com.kh.app.notice.vo.NoticeVo;
 import com.kh.app.util.JDBCTemplate;
 import com.kh.app.util.page.PageVo;
