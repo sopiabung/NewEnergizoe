@@ -60,7 +60,7 @@
           <hr style="margin-left: 40%; width: 300px;">
           <!-- 제목 -->
           <div class="col-md-6" id="noticetitle">
-            <p>자유게시판 상세페이지 제목</p>
+            <p>${freeVo.title}</p>
           </div>
           <div class="col-md-2" id="noticeinfo">
             <p>닉네임</p>
@@ -68,10 +68,10 @@
           </div>
 
           <div class="col-md-6" id="noticemain">
-            <p>내용@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ <br> @@@@@@@@@@@@@@@@@@@@@@@@@@<br>
-              내용@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br> 내용@@@@@@@@@@@@@@@@@@@@@@@@@
+            <p>${freeVo.content}
             </p>
           </div>
+          <img src="/resources/img/${freeVo.changeName}" alt="게시글이미지">
         </div>
       </div>
 

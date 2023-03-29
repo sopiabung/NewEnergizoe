@@ -54,7 +54,7 @@
   
     <!-- main 아래부터 작성 -->
   
-  <form>
+  <form action="/app01/free/freeForm" method="post" enctype="multipart/form-data">
     <div class="container mt-5" >
       <h3 class="text-center">자유게시글</h3>
       <br>
@@ -64,17 +64,17 @@
                   
                   <div class="form-group">
                       <label>제목</label>
-                      <input type="text" class="form-control">                     
+                      <input type="text" class="form-control" name="title">                     
                   </div>
                    <div class="form-group">
                       <label>내용</label>
-                      <textarea class="form-control" data-error="Please enter message." id="inputMessage"
+                      <textarea class="form-control" data-error="Please enter message." id="content"
                            required=""></textarea>
                       <!-- Error -->
                       <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group">
-                      <input type="file" class="form-control-file border" name="file" >
+                      <input type="file" class="form-control-file border" name="f" >
                   </div>
 
                   <div class="form-group">
