@@ -168,6 +168,7 @@ public class MemberDao {
 		pstmt.setString(6, vo.getAddress());
 		pstmt.setString(7, vo.getEmail());
 		pstmt.setInt(8, vo.getNo());
+		System.out.println(vo);
 		int result = pstmt.executeUpdate();
 		
 		//CLOSE
