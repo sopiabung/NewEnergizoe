@@ -3,7 +3,7 @@ package com.kh.app.member.vo;
 import java.time.LocalDateTime;
 
 public class MemberVo {
-	private int no;
+	private String no;
 	private String div;
 	private String name;
 	private String id;
@@ -18,12 +18,12 @@ public class MemberVo {
 	private String confirmPwd;
 
 
-	public int getNo() {
+	public String getNo() {
 		return no;
 	}
 
 
-	public void setNo(int no) {
+	public void setNo(String no) {
 		this.no = no;
 	}
 
@@ -156,7 +156,7 @@ public class MemberVo {
 	}
 
 
-	public MemberVo(int no, String div, String name, String id, String pwd, String nick, String hp, String birth,
+	public MemberVo(String no, String div, String name, String id, String pwd, String nick, String hp, String birth,
 			String address, String email, String quitYn, String joinDate) {
 		super();
 		this.no = no;

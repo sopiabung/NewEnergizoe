@@ -52,11 +52,14 @@ public class MemberDao {
 		//rs, 
 		MemberVo loginMember = null;
 		if(rs.next()) {
+			
+			String no = rs.getString("NO");
 			String id = rs.getString("ID");
 			String pwd = rs.getString("PWD");
 			String nick = rs.getString("NICK");
 
 			loginMember = new MemberVo();
+			loginMember.setId(no);
 			loginMember.setId(id);
 			loginMember.setPwd(pwd);
 			loginMember.setNick(nick);
@@ -167,9 +170,11 @@ public class MemberDao {
 		pstmt.setString(5, vo.getBirth());
 		pstmt.setString(6, vo.getAddress());
 		pstmt.setString(7, vo.getEmail());
-		pstmt.setInt(8, vo.getNo());
-		System.out.println(vo);
+		pstmt.setString(8, vo.getNo());
 		int result = pstmt.executeUpdate();
+		
+		System.out.println(result);
+		System.out.println(vo);
 		
 		//CLOSE
 		close(pstmt);

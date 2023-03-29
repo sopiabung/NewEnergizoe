@@ -139,11 +139,12 @@
               </ul>
             </div>
             <!-- 요기까지 사이드바 -->
-
             <!-- 아래부터 회원정보수정란 -->
             <div class="col-md-7 col-lg-8">
               <form action="${root}/member/edit" method="post" class="needs-validation">
                 <div class="row g-3">
+                
+                	<input type="hidden" name="no" value="${loginMember.no}">
 
                   <div class="col-12 input">
                     <label for="id" class="form-label">아이디</label>
