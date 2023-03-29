@@ -1,7 +1,6 @@
 package com.kh.app.volun.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.kh.app.util.page.PageVo;
 import com.kh.app.volun.service.VolunService;
-import com.kh.app.volun.vo.VolunVo;
 
 //봉사자 모집글 목록 조회
 @WebServlet("/volun/list")
@@ -43,12 +41,12 @@ public class VolunListController extends HttpServlet {
 			// 화면
 //			req.setAttribute("boardList", volunList);
 			req.setAttribute("pageVo", pageVo);
-			req.getRequestDispatcher("/WEB-INF/views/board/list.jsp").forward(req, resp);
+			req.getRequestDispatcher("/volunList.jsp").forward(req, resp);
 
 		} catch (Exception e) {
-			System.out.println("[ERROR] 게시글 조회 중 예외 발생");
+			System.out.println("[ERROR] 봉사모집글 조회 중 예외 발생");
 			e.printStackTrace();
-			req.getRequestDispatcher("/WEB-INF/views/common/error.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/common/errorPage.jsp").forward(req, resp);
 		}
 
 	}
