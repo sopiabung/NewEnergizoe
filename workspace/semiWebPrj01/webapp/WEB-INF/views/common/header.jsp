@@ -4,6 +4,15 @@
 <%
 	pageContext.setAttribute("root", request.getContextPath());
 %>
+
+<!-- JSTL로 if문 사용하기 -->
+	<c:if test="${alertMsg != null}">
+		<script>
+			alert('${alertMsg}');
+		</script>
+	</c:if>
+	<c:remove var="alertMsg" scope="session"/>
+	
 <!-- Custom styles for this template --> <link href="navbar.css" rel="stylesheet">
 <link rel="stylesheet" href="${root}/resources/css/common/header.css">
 
