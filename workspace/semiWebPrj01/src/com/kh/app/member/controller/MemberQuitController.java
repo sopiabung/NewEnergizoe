@@ -29,7 +29,7 @@ public class MemberQuitController extends HttpServlet{
 		try {
 			//비지니스로직
 			MemberService service = new MemberService();
-			result = service.quit(loginMember);
+//			result = service.quit(loginMember);
 
 		} catch (Exception e) {
 			System.out.println("[ERROR]탈퇴 중 예외발생..");
