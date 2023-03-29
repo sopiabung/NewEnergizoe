@@ -19,7 +19,7 @@ public class AdoptPromDao {
 	public List<AniadoptVo> promList(Connection conn , PageVo pagevo) throws Exception {
 		
 		//SQL (close)
-		String sql = "SELECT * FROM ( SELECT ROWNUM AS RNUM , TEMP.* FROM ( SELECT ANI.ANI_NO , ADP.TITLE , ANI.GENDER , ANI.NEUT_YNX , ANI.BIRTHYEAR , ANI.WEIGHT , ANI.COLOR FROM ADP_BO ADP JOIN ANIMAL_IN ANI ON ADP.ANI_NO = ANI.ANI_NO WHERE DELETE_YN = 'N' ORDER BY NO DESC ) TEMP ) WHERE RNUM BETWEEN ? AND ?";
+		String sql = "SELECT * FROM ( SELECT ROWNUM AS RNUM , TEMP.* FROM ( SELECT ANI.ANI_NO , ADP.TITLE , ANI.GENDER , ANI.NEUT_YNX , ANI.BIRTHYEAR , ANI.WEIGHT , ANI.COLOR FROM ADP_BO ADP JOIN ANIMAL_IN ANI ON ADP.ANI_NO = ANI.ANI_NO WHERE ADP.DEL_YN = 'N' ORDER BY NO DESC ) TEMP ) WHERE RNUM BETWEEN ? AND ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		int startRow = (pagevo.getCurrentPage()-1) * pagevo.getBoardLimit()+1;
 		int endRow = startRow + pagevo.getBoardLimit() -1;
