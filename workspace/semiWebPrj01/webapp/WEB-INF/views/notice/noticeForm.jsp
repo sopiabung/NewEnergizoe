@@ -19,7 +19,6 @@
 
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- 추가한 스크립트 -->
-    <title> Bootstrap 4 Form Validation with Validator.js Example | positronx.io</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"></link>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
@@ -43,8 +42,6 @@
         }
       
     </style>
-
-    
   </head>
 <body>
 <%@include file="/WEB-INF/views/common/header.jsp"%>
@@ -52,8 +49,7 @@
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   
     <!-- main 아래부터 작성 -->
-  
-  <form>
+  <form action="/app01/notice/noticeForm" method="post" enctype="multipart/form-data"> 
     <div class="container mt-5" >
       <h3 class="text-center">공지게시글</h3>
       <br>
@@ -63,18 +59,20 @@
                   
                   <div class="form-group">
                       <label>제목</label>
-                      <input type="text" class="form-control">                     
+                      <input type="text" class="form-control" name="title">                     
                   </div>
                    <div class="form-group">
                       <label>내용</label>
                       <textarea class="form-control" data-error="Please enter message." id="inputMessage"
-                           required=""></textarea>
+                           required="" name="content"></textarea>
                       <!-- Error -->
                       <div class="help-block with-errors"></div>
                   </div>
+                  <!-- 
                   <div class="form-group">
                       <input type="file" class="form-control-file border" name="file" >
                   </div>
+                   -->
 
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">등록</button>
