@@ -61,7 +61,7 @@
       <div class="container">
         <main>
           <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="/YW_images/cat1_update.jpg" alt="고양이" width="100%">
+            <img class="d-block mx-auto mb-4" src="/app01/resources/img/cat1_update.jpg" alt="고양이" width="100%">
             <h2>내 정보 수정</h2>
           </div>
 
@@ -82,7 +82,7 @@
 
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        <button onclick="location.href='${root}/member/edit'" class="accordion-button" type="button" data-bs-toggle="collapse"
                           data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                           aria-controls="panelsStayOpen-collapseOne">
                           <a href="#" >내 정보 수정</a>
@@ -93,7 +93,7 @@
 
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        <button onclick="location.href='${root}/member/myBoard'" class="accordion-button" type="button" data-bs-toggle="collapse"
                           data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
                           aria-controls="panelsStayOpen-collapseTwo">
                           <a href="#">내가 작성한 글</a> 
@@ -142,19 +142,19 @@
 
             <!-- 아래부터 회원정보수정란 -->
             <div class="col-md-7 col-lg-8">
-              <form class="needs-validation" novalidate>
+              <form action="${root}/member/edit" method="post" class="needs-validation">
                 <div class="row g-3">
 
                   <div class="col-12 input">
                     <label for="id" class="form-label">아이디</label>
                     <div class="input-group has-validation">
-                      <input type="text" class="form-control" id="id" value="회원아이디">
+                      <input name="memberId" type="text" class="form-control" id="id" placeholder="회원아이디">
                     </div>
                   </div>
 
                   <div class="col-12 input">
                     <label for="password" class="form-label">비밀번호<span class="text-muted"></span></label>
-                    <input type="password" class="form-control" id="password" placeholder="password" required>
+                    <input name="memberPwd" type="password" class="form-control" id="password" placeholder="password" required>
                     <div class="invalid-feedback">
                       변경할 비밀번호를 입력해주세요.
                     </div>
@@ -162,7 +162,7 @@
 
                   <div class="col-12 input">
                     <label for="password" class="form-label">비밀번호 확인<span class="text-muted"></span></label>
-                    <input type="password" class="form-control" id="password-check" placeholder="password check"
+                    <input name="memberPwdConfirm" type="password" class="form-control" id="password-check" placeholder="password check"
                       required>
                     <div class="invalid-feedback">
                       변경할 비밀번호를 한번 더 입력해주세요.
@@ -171,7 +171,7 @@
 
                   <div class="col-12 input">
                     <label for="nick" class="form-label">닉네임<span class="text-muted"></span></label>
-                    <input type="text" class="form-control" id="nick" placeholder="회원닉네임" required>
+                    <input name="memberNick" type="text" class="form-control" id="nick" placeholder="회원닉네임" required>
                     <div class="invalid-feedback">
                       변경할 닉네임을 입력해주세요.
                     </div>
@@ -179,12 +179,12 @@
 
                   <div class="col-12 input">
                     <label for="name" class="form-label">이름<span class="text-muted"></span></label>
-                    <input type="text" class="form-control" id="name" value="회원이름">
+                    <input name="memberName" type="text" class="form-control" id="name" placeholder="회원이름">
                   </div>
 
                   <div class="col-12 input">
                     <label for="phone" class="form-label">휴대전화 번호<span class="text-muted"></span></label>
-                    <input type="text" class="form-control" id="phone" placeholder="회원 휴대폰번호" required>
+                    <input name="memberHp" type="text" class="form-control" id="phone" placeholder="회원 휴대폰번호" required>
                     <div class="invalid-feedback">
                       변경할 휴대폰번호를 00000000000 형식으로 입력해주세요.
                       ( 하이픈(-) 제외 )
@@ -193,7 +193,7 @@
 
                   <div class="col-12 input">
                     <label for="email" class="form-label">이메일 <span class="text-muted"></span></label>
-                    <input type="email" class="form-control" id="email" placeholder="회원 이메일" required>
+                    <input name="memberEmail" type="email" class="form-control" id="email" placeholder="회원 이메일" required>
                     <div class="invalid-feedback">
                       변경할 이메일이 유효하지 않습니다.
                     </div>
@@ -201,7 +201,7 @@
 
                   <div class="col-12 input">
                     <label for="birth" class="form-label">생년월일<span class="text-muted"></span></label>
-                    <input type="text" class="form-control" id="birth" placeholder="회원 생년월일 (8자리)" required>
+                    <input name="memberBirth" type="text" class="form-control" id="birth" placeholder="회원 생년월일 (8자리)" required>
                     <div class="invalid-feedback">
                       변경할 생년월일 숫자만 8개 입력해주세요
                     </div>
@@ -209,7 +209,7 @@
 
                   <div class="col-12 input">
                     <label for="address" class="form-label">주소</label>
-                    <input type="text" class="form-control" id="address" placeholder="회원 주소" required>
+                    <input name="memberAddress" type="text" class="form-control" id="address" placeholder="회원 주소" required>
                     <div class="invalid-feedback">
                       변경할 주소를 입력해주세요.
                     </div>

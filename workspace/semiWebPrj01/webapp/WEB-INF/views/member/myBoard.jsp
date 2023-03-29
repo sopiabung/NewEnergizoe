@@ -69,7 +69,7 @@
       <div class="container">
         <main>
           <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="/YW_images/cat1_update.jpg" alt="고양이" width="100%">
+            <img class="d-block mx-auto mb-4" src="/app01/resources/img/cat1_update.jpg" alt="고양이" width="100%">
             <h2>나의 작성글</h2>
           </div>
 
@@ -83,42 +83,6 @@
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td colspan="3"onClick="location.href='http://www.google.com/'">@@@@@@@@@@@@@</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td colspan="3"onClick="location.href='http://www.google.com/'">@@@@@@@@@@@@@</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="3"onClick="location.href='http://www.google.com/'">@@@@@@@@@@@@@</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td colspan="3"onClick="location.href='http://www.google.com/'">@@@@@@@@@@@@@</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td colspan="3"onClick="location.href='http://www.google.com/'">@@@@@@@@@@@@@</td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td colspan="3"onClick="location.href='http://www.google.com/'">@@@@@@@@@@@@@</td>
-              </tr>
-              <tr>
-                <th scope="row">7</th>
-                <td colspan="3"onClick="location.href='http://www.google.com/'">@@@@@@@@@@@@@</td>
-              </tr>
-              <tr>
-                <th scope="row">8</th>
-                <td colspan="3"onClick="location.href='http://www.google.com/'">@@@@@@@@@@@@@</td>
-              </tr>
-              <tr>
-                <th scope="row">9</th>
-                <td colspan="3"onClick="location.href='http://www.google.com/'">@@@@@@@@@@@@@</td>
-              </tr>
-              <tr>
-                <th scope="row">10</th>
                 <td colspan="3"onClick="location.href='http://www.google.com/'">@@@@@@@@@@@@@</td>
               </tr>
             </tbody>

@@ -5,10 +5,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.websocket.Session;
+
 import com.kh.app.member.vo.MemberVo;
-import com.kh.app.util.JDBCTemplate;
+
+import static com.kh.app.util.JDBCTemplate.*;
 
 public class MemberDao {
+	
 	//회원가입
 	public int join(Connection conn, MemberVo vo) throws Exception {
 
@@ -27,7 +31,7 @@ public class MemberDao {
 		pstmt.setString(9, vo.getEmail());
 		int result = pstmt.executeUpdate();
 
-		JDBCTemplate.close(pstmt);
+		close(pstmt);
 
 		System.out.println(vo);
 		return result;
@@ -57,8 +61,8 @@ public class MemberDao {
 			loginMember.setPwd(pwd);
 			loginMember.setNick(nick);
 		}
-		JDBCTemplate.close(rs);
-		JDBCTemplate.close(pstmt);
+		close(rs);
+		close(pstmt);
 		
 		return loginMember;
 	}
@@ -72,7 +76,10 @@ public class MemberDao {
 		pstmt.setString(1, loginMember.getId());
 		int result = pstmt.executeUpdate();
 
-		JDBCTemplate.close(pstmt);
+		
+		
+		
+		close(pstmt);
 
 		return result;
 
@@ -111,8 +118,8 @@ public class MemberDao {
 //			e.printStackTrace();
 //			throw new Exception("아이디로 회원정보를 조회하는 중 오류가 발생했습니다.");
 //		} finally {
-//			JDBCTemplate.close(rs);
-//			JDBCTemplate.close(pstmt);
+//			close(rs);
+//			close(pstmt);
 //		}
 //
 //		return member;
@@ -131,7 +138,7 @@ public class MemberDao {
 			e.printStackTrace();
 			throw new Exception("게시글 삭제 중 오류가 발생했습니다.");
 		} finally {
-			JDBCTemplate.close(pstmt);
+			close(pstmt);
 		}
 	}
 	//댓글삭제..
@@ -143,8 +150,30 @@ public class MemberDao {
 	        pstmt.setString(1, memberId);
 	        pstmt.executeUpdate();
 	    } finally {
-	        JDBCTemplate.close(pstmt);
+	        close(pstmt);
 	    }
+	}
+
+
+	public int edit(Connection conn, MemberVo vo) throws Exception {
+		
+		//SQL
+		String sql = "UPDATE MEMBER SET ID = ? , PWD = ? , NICK = ? , HP = ? , BIRTH = ? , ADDRESS = ? , EMAIL = ? WHERE NO = ?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, vo.getId());
+		pstmt.setString(2, vo.getPwd());
+		pstmt.setString(3, vo.getNick());
+		pstmt.setString(4, vo.getHp());
+		pstmt.setString(5, vo.getBirth());
+		pstmt.setString(6, vo.getAddress());
+		pstmt.setString(7, vo.getEmail());
+		pstmt.setInt(8, vo.getNo());
+		int result = pstmt.executeUpdate();
+		
+		//CLOSE
+		close(pstmt);
+
+		return result;
 	}
 
 }
