@@ -1,16 +1,13 @@
 package com.kh.app.free.controller;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.kh.app.free.service.FreeService;
 import com.kh.app.free.vo.FreeVo;
-
 
 @WebServlet("/free/freeDetail")
 public class FreeDetailController extends HttpServlet {

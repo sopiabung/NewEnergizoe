@@ -63,7 +63,7 @@
             <p>${freeVo.title}</p>
           </div>
           <div class="col-md-2" id="noticeinfo">
-            <p>닉네임</p>
+            <p>${freeVo.writer}</p>
 
           </div>
 
@@ -71,14 +71,14 @@
             <p>${freeVo.content}
             </p>
           </div>
-          <img src="/resources/img/${freeVo.changeName}" alt="게시글이미지">
+          <img src="/app01/resources/img/${ freeVo.changeName }" alt="게시글이미지">
         </div>
       </div>
 
 
     </main>
 
-  </main>
+  <a href="/app01/free/freeList" class="btn btn-outline-secondary">목록</a>
     <!-- 푸터들어갈자리 -->
     <%@include file="/WEB-INF/views/common/footer.jsp" %>
 

@@ -34,6 +34,7 @@ public class FreeWriterController extends HttpServlet {
 		// String writer = req.getParameter("writer");
 		String title = req.getParameter("title");
 		String content = req.getParameter("content");
+		String writer = req.getParameter("writer");
 
 		Part f = req.getPart("f"); // 파일 객체 얻음
 
@@ -61,18 +62,16 @@ public class FreeWriterController extends HttpServlet {
 
 		// 데이터 뭉치기
 		FreeVo vo = new FreeVo();
-		// vo.setWriter(writer);
+		vo.setWriter(writer);
 		vo.setTitle(title);
 		vo.setContent(content);
 
 		int result = 0;
 		try {
 			// 파일 정보 디비에 인서트 시작 (원본명,변경된이름)
-
 			FreeAttachmentVo atVo = new FreeAttachmentVo();
 			atVo.setOriginName(originfileName);
 			atVo.setChangeName(fileName + ext);
-
 			// 파일 정보 디비에 인서트 끝
 
 			// 서비스 호출

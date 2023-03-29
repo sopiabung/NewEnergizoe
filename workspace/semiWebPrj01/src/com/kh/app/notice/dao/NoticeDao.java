@@ -14,7 +14,7 @@ public class NoticeDao {
 	public List<NoticeVo> selectList(Connection conn, PageVo pageVo) throws Exception {
 
 		// SQL (close)
-		String sql = "SELECT * FROM NOTICE WHERE DEL_YN = 'N'";
+		String sql = "SELECT * FROM NOTICE WHERE DEL_YN = 'N' ORDER BY FREE_NO DESC";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
 
@@ -42,7 +42,7 @@ public class NoticeDao {
 	public int write(Connection conn, NoticeVo vo) throws Exception {
 
 		// SQL (close)
-		String sql = "INSERT INTO NOTICE (FREE_NO, ADMIN_NO, TITLE, CONTENT, ENROLL_DATE, DEL_YN) VALUES (SEQ_FREE_NO.NEXTVAL, ?, ?, ?, SYSDATE, 'N')";
+		String sql = "INSERT INTO NOTICE (FREE_NO, ADMIN_NO, TITLE, CONTENT, ENROLL_DATE, DEL_YN) VALUES (SEQ_NOTICE_FREE_NO.NEXTVAL, ?, ?, ?, SYSDATE, 'N')";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, "2");
 		pstmt.setString(2, vo.getTitle());

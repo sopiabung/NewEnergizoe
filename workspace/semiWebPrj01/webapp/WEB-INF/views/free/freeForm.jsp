@@ -61,14 +61,14 @@
       <div class="card">
           <div class="card-body">
               <form role="form" data-toggle="validator">
-                  
+                  <input type="hidden" class="form-control" name="writer" value="${loginMember.nick}">   
                   <div class="form-group">
                       <label>제목</label>
                       <input type="text" class="form-control" name="title">                     
                   </div>
                    <div class="form-group">
                       <label>내용</label>
-                      <textarea class="form-control" data-error="Please enter message." id="content"
+                      <textarea class="form-control" data-error="Please enter message." name="content"
                            required=""></textarea>
                       <!-- Error -->
                       <div class="help-block with-errors"></div>

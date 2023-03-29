@@ -44,6 +44,9 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/app01/introduce.jsp">소개</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/app01/notice/noticeList">공지</a>
+            </li>
             
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">신고하기</a>
@@ -66,13 +69,8 @@
               <a class="nav-link active" href="/app01/volunList.jsp">봉사</a>
             </li>
             
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">자유</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/app01/freePhotoList.jsp">사진 자랑</a></li>
-                <li><a class="dropdown-item" href="/app01/freeCommList.jsp">자유 게시판</a></li>
-                <li><a class="dropdown-item" href="/app01/freeStoryList.jsp">우리 아이 이야기</a></li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link active" href="/app01/free/freeList">자유게시판</a>
             </li>
             
           </ul>

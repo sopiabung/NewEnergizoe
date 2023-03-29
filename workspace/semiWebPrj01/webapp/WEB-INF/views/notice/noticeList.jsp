@@ -80,9 +80,9 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<div id="btn-wrap">
-					<button onclick="location.href='/app01/notice/noticeForm'">게시글 작성</button>
-				</div>
+	<div class="col-md-3 text-end" id="writeBtn">
+		<button onclick="location.href='/app01/notice/noticeForm'" type="button" class="btn btn-outline-primary me-2">글쓰기</button>
+	</div>
 	<div id="page-area">
 		<c:if test="${ pageVo.currentPage > 1 }">
 			<a href="/notice/noticeList?page=${pageVo.currentPage-1}">이전</a>
