@@ -74,7 +74,7 @@
     <div class="col-md-3 text-end">
     	<c:if test="${loginMember != null }">
     		${loginMember.nick}님 환영합니다.
-    		
+    		<button type="button" class="btn btn-outline-primary ms-2"><a style="text-decoration: none; color: blue;" href="/app01/logout.jsp">로그아웃</a></button>
     	</c:if>
     	
     	<c:if test="${loginMember == null }">
