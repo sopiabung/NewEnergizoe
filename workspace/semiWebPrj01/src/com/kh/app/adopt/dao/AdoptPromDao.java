@@ -3,49 +3,53 @@ package com.kh.app.adopt.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.kh.app.adopt.vo.AdoptVo;
+import com.kh.app.adopt.vo.AniadoptVo;
 import com.kh.app.util.JDBCTemplate;
+import com.kh.app.util.page.PageVo;
 
 public class AdoptPromDao {
 
+	
+	
 	//입양홍보목록조회
-	public List<AdoptVo> promList(Connection conn) throws Exception {
+	public List<AniadoptVo> promList(Connection conn , PageVo pagevo) throws Exception {
 		
 		//SQL (close)
-		String sql = "SELECT * FROM ADP_BO WHERE DELETE_YN = 'N'";
+		String sql = "SELECT * FROM ( SELECT ROWNUM AS RNUM , TEMP.* FROM ( SELECT ANI.ANI_NO , ADP.TITLE , ANI.GENDER , ANI.NEUT_YNX , ANI.BIRTHYEAR , ANI.WEIGHT , ANI.COLOR FROM ADP_BO ADP JOIN ANIMAL_IN ANI ON ADP.ANI_NO = ANI.ANI_NO WHERE DELETE_YN = 'N' ORDER BY NO DESC ) TEMP ) WHERE RNUM BETWEEN ? AND ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		ResultSet rs = pstmt.executeQuery();
+		int startRow = (pagevo.getCurrentPage()-1) * pagevo.getBoardLimit()+1;
+		int endRow = startRow + pagevo.getBoardLimit() -1;
+		pstmt.setInt(1, startRow);
+		pstmt.setInt(2, endRow);
+		ResultSet rs = pstmt.executeQuery(); 
 		
 		
 		//rs -> obj(List<AdoptVo>)
-		List<AdoptVo> adpList = new ArrayList<AdoptVo>();
+		List<AniadoptVo> adpList = new ArrayList<AniadoptVo>();
 		
 		while( rs.next() ) {
 			
-			String adpNo = rs.getString("ADP_NO");				//번호
-			String title = rs.getString("TITLE");				//제목
-			String content = rs.getString("CONTENT");			//내용
-			String enrollDate = rs.getString("ENROLL_DATE");	//작성일시
-			String enterDate = rs.getString("ENTER_DATE");		//입소일자
-			String memberNo = rs.getString("MEMBER_NO");		//입양자번호
-			String shelterNo = rs.getString("SHELTER_NO");		//게시글작성자번호
-			String aniNo = rs.getString("ANI_NO");				//동물번호
-			String adpDate = rs.getString("ADP_DATE");			//입양일자
+			String title = rs.getString("TITLE");				
+			String gender = rs.getString("GENDER");			
+			String neutynx = rs.getString("NEUTYNX");	
+			String birthyear = rs.getString("BIRTHYEAR");		
+			String weight= rs.getString("WEIGHT");			
+			String color = rs.getString("COLOR");		
+			String anino = rs.getString("ANI_NO");				
 			
-			AdoptVo vo = new AdoptVo();
-			vo.setAdpNo(adpNo);
-			vo.setTitle(title);
-			vo.setContent(content);
-			vo.setEnrollDate(enrollDate);
-			vo.setEnterDate(enterDate);
-			vo.setMemberNo(memberNo);
-			vo.setShelterNo(shelterNo);
-			vo.setAniNo(aniNo);
-			vo.setAdpDate(adpDate);
+			AniadoptVo vo = new AniadoptVo();
+			vo.getAdp().setTitle(title); 
+			vo.getAni().setGender(gender);
+			vo.getAni().setNeutYnx(neutynx);
+			vo.getAni().setBirthYear(birthyear);
+			vo.getAni().setWeight(weight);
+			vo.getAni().setColor(color);
+			vo.getAni().setAniNo(anino);
+
 			
 			adpList.add(vo);
 			
@@ -102,17 +106,44 @@ public class AdoptPromDao {
 	public int PromWrite(Connection conn, AdoptVo vo) throws Exception {
 		
 		//SQL (close)
-		String sql = "INSERT INTO ADP_BO(ADP_NO , SHELTER_NO , TITLE , CONTENT) VALUES (SEQ_ADP_BO_NO.NEXTVAL , ? , ? , ?)";
+		String sql = "INSERT INTO ADP_BO(NAME , EMAIL , HP , ADDRESS) VALUES (SEQ_ADP_BO_NO.NEXTVAL , ? , ? , ?)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, vo.getShelterNo());
-		pstmt.setString(2, vo.getTitle());
-		pstmt.setString(3, vo.getContent());
+		pstmt.setString(1, vo.getName());
+		pstmt.setString(2, vo.getEmail());
+		pstmt.setString(3, vo.getHp());
+		pstmt.setString(4, vo.getAddress());
 		int result = pstmt.executeUpdate();
 		
 		JDBCTemplate.close(pstmt);
 		
 		return result;
-	}	
+	}
+
+
+	//게시글 전체 갯수 조회(삭제되지않은)
+	public int selectCount(Connection conn) throws Exception {
+		
+		//SQL (close)
+		String sql = "SELECT COUNT(*) AS CNT FROM ADP_BO WHERE DEL_YN = 'N'";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		ResultSet rs = pstmt.executeQuery();
+		
+		//rs -> obj
+		int cnt = 0;
+		if( rs.next() ) {
+			cnt = rs.getInt("CNT");
+		}
+		
+		JDBCTemplate.close(rs);
+		JDBCTemplate.close(pstmt);
+		
+		return cnt;
+		
+	}
+
+
+
+		
 	
 
 	
