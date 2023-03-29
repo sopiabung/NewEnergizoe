@@ -136,6 +136,16 @@ public class MemberVo {
 	public void setJoinDate(String joinDate) {
 		this.joinDate = joinDate;
 	}
+	
+	public String getConfirmPwd() {
+		return confirmPwd;
+	}
+	
+	
+	public void setConfirmPwd(String confirmPwd) {
+		this.confirmPwd = confirmPwd;
+	}
+	
 
 
 	@Override
@@ -170,7 +180,7 @@ public class MemberVo {
 	}
 
 
-	//비밀번호 확인 메소드 추가..
+//	비밀번호 확인 메소드 추가..
 //	public String getPwdConfirm() {
 //		if (!pwd.equals(confirmPwd)) {
 //			return "비밀번호와 비밀번호 확인이 일치하지 않습니다.";
@@ -191,10 +201,6 @@ public class MemberVo {
    
 
 	
-	public void setJoinDate(LocalDateTime localDateTime) {
-		this.joinDate = joinDate;
-
-	}
 
 
 
