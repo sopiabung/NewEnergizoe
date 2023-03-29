@@ -3,8 +3,6 @@ package com.kh.app.animal.vo;
 public class AnimalVo {
 	
 	private String aniNo;
-	private String typeCode;
-	private String specCode;
 	private String color;
 	private String birthYear;
 	private String neutYnx;
@@ -12,23 +10,14 @@ public class AnimalVo {
 	private String character;
 	private String gender;
 	private String name;
+	private AnimalSpVo animalSpVo;
+	private AnimalTVo animalTVo;
+	
 	public String getAniNo() {
 		return aniNo;
 	}
 	public void setAniNo(String aniNo) {
 		this.aniNo = aniNo;
-	}
-	public String getTypeCode() {
-		return typeCode;
-	}
-	public void setTypeCode(String typeCode) {
-		this.typeCode = typeCode;
-	}
-	public String getSpecCode() {
-		return specCode;
-	}
-	public void setSpecCode(String specCode) {
-		this.specCode = specCode;
 	}
 	public String getColor() {
 		return color;
@@ -72,18 +61,28 @@ public class AnimalVo {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public AnimalSpVo getAnimalSpVo() {
+		return animalSpVo;
+	}
+	public void setAnimalSpVo(AnimalSpVo animalSpVo) {
+		this.animalSpVo = animalSpVo;
+	}
+	public AnimalTVo getAnimalTVo() {
+		return animalTVo;
+	}
+	public void setAnimalTVo(AnimalTVo animalTVo) {
+		this.animalTVo = animalTVo;
+	}
 	@Override
 	public String toString() {
-		return "AniVo [aniNo=" + aniNo + ", typeCode=" + typeCode + ", specCode=" + specCode + ", color=" + color
-				+ ", birthYear=" + birthYear + ", neutYnx=" + neutYnx + ", weight=" + weight + ", character="
-				+ character + ", gender=" + gender + ", name=" + name + "]";
+		return "AnimalVo [aniNo=" + aniNo + ", color=" + color + ", birthYear=" + birthYear + ", neutYnx=" + neutYnx
+				+ ", weight=" + weight + ", character=" + character + ", gender=" + gender + ", name=" + name
+				+ ", animalSpVo=" + animalSpVo + ", animalTVo=" + animalTVo + "]";
 	}
-	public AnimalVo(String aniNo, String typeCode, String specCode, String color, String birthYear, String neutYnx,
-			String weight, String character, String gender, String name) {
+	public AnimalVo(String aniNo, String color, String birthYear, String neutYnx, String weight, String character,
+			String gender, String name, AnimalSpVo animalSpVo, AnimalTVo animalTVo) {
 		super();
 		this.aniNo = aniNo;
-		this.typeCode = typeCode;
-		this.specCode = specCode;
 		this.color = color;
 		this.birthYear = birthYear;
 		this.neutYnx = neutYnx;
@@ -91,11 +90,16 @@ public class AnimalVo {
 		this.character = character;
 		this.gender = gender;
 		this.name = name;
+		this.animalSpVo = animalSpVo;
+		this.animalTVo = animalTVo;
 	}
 	public AnimalVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
 	
 	
 	

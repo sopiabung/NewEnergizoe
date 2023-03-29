@@ -230,7 +230,7 @@
 
       <!-- 게시글 목록 -->
       <div class="col-md-3 text-end" id="writeBtn">
-        <button type="button" class="btn btn-outline me-2" style="background-color: #FCE593;" onclick="location.href='/app01/adopt/write'">글쓰기</button>
+        <button type="button" class="btn btn-outline me-2" style="background-color: #FCE593;" onclick="location.href='${root}/adoptPromForm.jsp'">글쓰기</button>
       </div>
       
       <div class="container">
@@ -242,7 +242,7 @@
               <img src="resources/img/화난 포메.jpg"
                 class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">${avo.title }</h5>
+                <h5 class="card-title">${avo.title}</h5>
                 <p class="card-text"> <b>${avo.aniNo}</b> 
                 <br> ${avo.gender} ${avo.neutYnx} 
                 <br> ${avo.birthYear} / ${avo.weight} / ${avo.color} </p>
@@ -250,13 +250,35 @@
             </div>
           </div>
           </c:forEach>
-          <!-- row div  -->
         </div>
-        <!-- con div  -->
       </div>
           
-          
       <!-- 게시글 목록 끝 -->
+      <c:if test="${ loginMember != null}">
+			<div id="btn-wrap">
+				<button onclick="location.href='/board/write'">게시글 작성</button>
+			</div>
+		</c:if>
+
+		<div id="page-area">
+         
+            <c:if test="${ pageVo.currentPage > 1 }">
+               <a href="/adopt/prom/list?page=${pageVo.currentPage-1}">이전</a>
+            </c:if>
+            
+            <c:forEach var="i" begin="${pageVo.startPage}" end="${pageVo.endPage}">               
+               <c:if test="${pageVo.currentPage == i}">
+                  <span>${i}</span>
+               </c:if>
+               <c:if test="${pageVo.currentPage != i}">
+                  <a href="/adopt/prom/list?page=${i}">${i}</a>
+               </c:if>
+            </c:forEach>
+            
+            <c:if test="${ pageVo.currentPage < pageVo.maxPage }">
+               <a href="/adopt/prom/list?page=${pageVo.currentPage+1}">다음</a>
+            </c:if>
+         </div>
 
 	<%@include file="/WEB-INF/views/common/paging.jsp" %>
 	<%@include file="/WEB-INF/views/common/footer.jsp" %>

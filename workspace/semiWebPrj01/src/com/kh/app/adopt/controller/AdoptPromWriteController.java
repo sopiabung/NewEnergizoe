@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 import com.kh.app.adopt.service.AdoptPromService;
-import com.kh.app.adopt.vo.AdoptVo;
+import com.kh.app.adopt.vo.AniadoptVo;
 
 @MultipartConfig(
 		maxFileSize = 1024 * 1024 * 100 , 
@@ -31,19 +31,21 @@ public class AdoptPromWriteController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		//데이터 꺼내기
-		String shelterNo = req.getParameter("shelterNo");
-		String title = req.getParameter("title");
-		String content = req.getParameter("content");
-		
+		String shelAddress = req.getParameter("shelAddress");
+		String animalSpec = req.getParameter("animalSpec");
+		String animalName = req.getParameter("animalName");
+		String animalGender = req.getParameter("animalGender");
+		String animalNeut = req.getParameter("animalNeut");
+		String animalAge = req.getParameter("animalAge");
+		String animalWeight = req.getParameter("animalWeight");
+		String character = req.getParameter("character");
 		//파일 서버에 저장
 		Part f = req.getPart("f"); 
 		
 		
 		//데이터 뭉치기
-		AdoptVo vo = new AdoptVo();
-		vo.setShelterNo(shelterNo);
-		vo.setTitle(title);
-		vo.setContent(content);
+		AniadoptVo vo = new AniadoptVo();
+		vo.setMv().s;
 		
 		
 		int result = 0;
