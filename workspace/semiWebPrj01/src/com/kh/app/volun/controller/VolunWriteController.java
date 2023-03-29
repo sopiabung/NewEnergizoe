@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.util.UUID;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,11 @@ import com.kh.app.volun.service.VolunService;
 import com.kh.app.volun.vo.VolunVo;
 
 //봉사자 모집 글 작성
+@MultipartConfig(
+	// 50MB
+	maxFileSize = 1024 * 10124 * 50, // 파일 하나당 크기
+	maxRequestSize = 1024 * 1024 * 50 * 10 // 리퀘스트 총 크기		
+		)
 @WebServlet("/volun/write")
 public class VolunWriteController extends HttpServlet { 
 
@@ -68,13 +74,6 @@ public class VolunWriteController extends HttpServlet {
 		// 데이터 뭉치기
 		VolunVo vo = new VolunVo();
 
-//		shelNo
-//		type
-//		volDate
-//		endTime
-//		needPeople
-//		content
-
 		vo.setShelNo(shelNo);
 		vo.setType(type);
 		vo.setVolDate(volDate);
@@ -104,10 +103,10 @@ public class VolunWriteController extends HttpServlet {
 		// 화면
 		if (result == 1) {
 			req.getSession().setAttribute("alertMsg", "게시글 작성 성공!");
-			resp.sendRedirect("/app01/volunList.jsp"); // 최상단경로로 보내기
+			resp.sendRedirect("${root}/volunList.jsp"); // 최상단경로로 보내기
 		} else {
 			req.getSession().setAttribute("alertMsg", "게시글 작성 실패!");
-			resp.sendRedirect("/WEB-INF/views/volunteer/volunForm."); // 최상단경로로 보내기
+			resp.sendRedirect("${root}/WEB-INF/views/volunteer/volunForm.jsp"); // 최상단경로로 보내기
 		}
 
 	}

@@ -39,10 +39,10 @@
       <div class="col-sm-12">
           <h2>보호소 모집 정보 올리기</h2>
           
-            <form action="writeAction" method = "POST" enctype="multipart/form-data">
+            <form action="${root}/" method = "POST" enctype="multipart/form-data">
             <div class="form-group">
               <label for="exampleSelect1" class="form-label mt-4">봉사 종류</label>
-              <select class="form-select" id="exampleSelect1">
+              <select class="form-select" id="exampleSelect1" name="type">
                 <option>전체</option>
                 <option>돌봄</option>
                 <option>산책</option>
@@ -55,30 +55,30 @@
           &nbsp          
           <div class="form-group">
             <label for="usr" font-size>봉사 시작 시간</label>
-            <input type="datetime-local" >
+            <input type="datetime-local" name="volDate">
           </div>
           &nbsp&nbsp
           <div class="form-group">
             <label for="usr" font-size>봉사 종료 시간</label>
-            <input type="datetime-local" >
+            <input type="datetime-local" name="endTime">
           </div>
           &nbsp&nbsp
           <div class="form-group">
             <label for="usr" font-size>봉사 필요 인원</label>
-            <input type="number" >
+            <input type="number" name="needPeople">
           </div>
           &nbsp&nbsp
           <div class="form-outline mb-4">
           <label for="usr">내용</label>           
-            <textarea class="form-control" id="textAreaExample6" rows="8" placeholder="봉사 · 보호소에 대한 정보를 자세히 작성해주세요." ></textarea>
+            <textarea name="content" class="form-control" id="textAreaExample6" rows="8" placeholder="봉사 · 보호소에 대한 정보를 자세히 작성해주세요." ></textarea>
             <label class="form-label" for="textAreaExample6"></label>
           </div>
           <div class="form-group uploadPhoto">
             <label for="usr">사진파일첨부 (최대3장)</label>
           <br>          
-            <input type="file" class="form-control-file border" name="file" >
-            <input type="file" class="form-control-file border" name="file" >
-            <input type="file" class="form-control-file border" name="file" >
+            <input type="file" class="form-control-file border">
+            <input type="file" class="form-control-file border">
+            <input type="file" class="form-control-file border">
           </div>
           <br>
           &nbsp &nbsp
