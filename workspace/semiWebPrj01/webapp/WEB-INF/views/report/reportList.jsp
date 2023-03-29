@@ -14,8 +14,8 @@
   <!-- Custom styles for this template -->
   <link href="carousel.css" rel="stylesheet">
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
-  
   	table > tbody > tr{
   		height: 50px;
   	}
@@ -41,7 +41,10 @@
   		width: 50px;
   		height: 5px;
   	}
-  
+  	
+  	#page-area {
+  		font-size: 18px;
+  	}
   </style>
   </head>
 
@@ -51,7 +54,7 @@
 	<div class="container" style="margin-top:30px">
      <div class="row">
       <div class="col-sm-12" style="text-align: center; margin-bottom: 50px;">
-          <h2>실종신고</h2>
+          <h2><b>실종신고 게시판</b></h2>
 		
 		<table>
 			<thead>
@@ -74,10 +77,17 @@
 			</tbody>
 		</table>
 		<div id="btn-wrap">
-   		<a class="btn btn-lg btn-primary" href="/app01/report/Write">실종신고하기</a>		
+   		<a class="btn btn-outline-primary ms-2" href="/app01/report/Write">실종신고하기</a>		
 		</div>
-		
-		
+		<div id="page-area">
+			<a href="">이전</a>
+			<a href="">1</a>
+			<a href="">2</a>
+			<a href="">3</a>
+			<a href="">4</a>
+			<a href="">5</a>
+			<a href="">다음</a>
+		</div>
 	   </div>
 	 </div>
    </div>

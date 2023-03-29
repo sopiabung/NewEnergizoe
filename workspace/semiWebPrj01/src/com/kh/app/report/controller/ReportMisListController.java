@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.kh.app.report.service.ReportMisService;
-import com.kh.app.reports.vo.ReportMisVo;
+import com.kh.app.report.vo.ReportMisVo;
 import com.kh.app.util.page.PageVo;
 
 @WebServlet("/report/List")
