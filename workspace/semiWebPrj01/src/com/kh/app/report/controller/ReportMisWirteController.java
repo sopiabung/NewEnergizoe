@@ -1,23 +1,17 @@
 package com.kh.app.report.controller;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.UUID;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
 
-import com.kh.app.report.service.ReportMisService;
-import com.kh.app.reports.vo.AttachmentVo;
+import com.kh.app.board.vo.AnimalinVo;
 import com.kh.app.reports.vo.ReportMisVo;
 
-@WebServlet("/report/write")
+@WebServlet("/report/Write")
 public class ReportMisWirteController extends HttpServlet{
 	
 	//게시글 작성(화면)
@@ -31,9 +25,11 @@ public class ReportMisWirteController extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		//데이터 꺼내기
-		String writer = req.getParameter("writer");
-		String title = req.getParameter("title");
-		String content = req.getParameter("content");
+		String animalName = req.getParameter("animalName");
+		String character = req.getParameter("character");
+		String color = req.getParameter("color");
+		String gender = req.getParameter("gender");
+		String weight = req.getParameter("weight");
 		
 //		//파일 객체
 //		Part f = req.getPart("f"); 
@@ -61,10 +57,12 @@ public class ReportMisWirteController extends HttpServlet{
 		
 		
 		//데이터 뭉치기
-		ReportMisVo vo = new ReportMisVo();
-		vo.setWriter(writer);
-		vo.setTitle(title);
-		vo.setContent(content);
+		AnimalinVo vo = new AnimalinVo();
+		vo.setName(animalName);
+		vo.setCharacter(character);
+		vo.setColor(color);
+		vo.setGender(gender);
+		vo.setWeight(weight);
 		
 		int result = 0;
 //		try {

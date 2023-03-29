@@ -48,13 +48,13 @@
             </div> -->
           </div>          
           &nbsp;          
-          <div class="form-group">
+          <!--<div class="form-group">
             <label for="usr" font-size>실종날짜</label>&emsp;
             <input type="date" >
-          </div>
+          </div>  -->
           &nbsp;
           <div class="form-group">
-            <label for="exampleSelect1" class="form-label mt-4">실종지역</label>
+            <!-- <label for="exampleSelect1" class="form-label mt-4">실종지역</label>
             <select class="form-select" id="exampleSelect1">
               <option>강남구</option>
               <option>강동구</option>
@@ -80,28 +80,28 @@
               <option>은평구</option>
               <option>종로구</option>
               <option>중구</option>
-              <option>중랑구</option>
+              <option>중랑구</option> -->
             </select>
           &nbsp;
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="usr">실종장소</label>
-            <input type="text" placeholder="잃어버린 장소를 구체적으로 적어주세요." class="form-control" id="title" name = "title">
+            <input type="text" placeholder="잃어버린 장소를 구체적으로 적어주세요." class="form-control" id="area" name = "area">
           </div>
           &nbsp;
           <div class="form-group">
             <label for="usr">보호자 이름</label>
-            <input type="text" required class="form-control" id="title" name = "title">
+            <input type="text" required class="form-control" id="proName" name = "proName">
           </div>
           &nbsp;
           <div class="form-group">
             <label for="usr">보호자 연락처</label>
-            <input type="text" required class="form-control" id="title" name = "title">
+            <input type="text" required class="form-control" id="proHp" name = "proHp">
           </div>
-          &nbsp;
+          &nbsp; -->
           <!-- 동물정보 -->
           <div class="form-group" style="padding-bottom: 30px;">
             <label for="exampleSelect1" class="form-label mt-4">품종</label>
-            <select class="form-select" id="exampleSelect1" >
+            <select class="form-select" id="exampleSelect1" name="breedDog" >
               <option>강아지-전체</option>
               <option>믹스견</option>
               <option>골든리트리버</option>
@@ -135,7 +135,7 @@
               <option>프렌치불독</option>
               <option>기타</option>
             </select>
-            <select class="form-select" id="exampleSelect1">
+            <select class="form-select" id="exampleSelect1" name="breedCat">
               <option>고양이-전체</option>
               <option>믹스고양이</option>
               <option>네벨룽</option>
@@ -169,17 +169,17 @@
               <option>히말라얀</option>
               <option>기타</option>
             </select>
-            <input type="text" placeholder="기타사항 선택시 품종을 적어주세요." class="form-control" id="title" name = "title">
+            <input type="text" placeholder="위에 맞는 품종이 없을 시 적어주세요." class="form-control" id="etc" name = "etc">
             &nbsp;
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="usr">성별</label>
             
-<!--              <div class="form-check">
+             <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
               <label class="form-check-label" for="flexRadioDefault1">
                 미확인
               </label>              
-            </div> -->
+            </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
               <label class="form-check-label" for="flexRadioDefault2">
@@ -199,15 +199,25 @@
                 중성화완료
               </label>
             </div>
-          </div>
+          </div> -->
+          <br>
+          <label for="usr">성별</label><br>
+          <form action="processForm" method="post">
+		    <label for="male">수컷</label>
+		    <input class="form-check-input" type="radio" id="male" name="gender" value="male">
+		    <br>
+		    <label for="female">암컷</label>
+		    <input class="form-check-input" type="radio" id="female" name="gender" value="female">
+		    <br>
+		  </form>
           &nbsp;
            <div class="form-group">
             <label for="usr">반려동물 이름</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" name="animalName">
            </div>&nbsp;
           <div class="form-group">
             <label for="usr">나이</label>
-            <select class="form-select" id="exampleSelect1">
+            <select class="form-select" id="exampleSelect1" name="age">
               <option>1개월-3개월</option>
               <option>4개월-6개월</option>
               <option>7개월-9개월</option>
@@ -222,7 +232,7 @@
           </div>&nbsp;
           <div class="form-group">
             <label for="usr">몸무게</label>
-            <select class="form-select" id="exampleSelect1">
+            <select class="form-select" id="exampleSelect1" name="weight">
               <option>1kg미만</option>
               <option>1kg-3kg</option>
               <option>4kg-6kg</option>
@@ -236,17 +246,18 @@
           &nbsp;
           <div class="form-group">
             <label for="usr">털색</label>
-            <input type="text" required placeholder="털색을 설명해주세요." class="form-control" id="title" name = "title">
+            <input type="text" required placeholder="털색을 설명해주세요." class="form-control" id="color" name="color">
           </div>
           &nbsp;
           <div class="form-group">
             <label for="usr">특징</label>
-            <input type="text" required placeholder="눈에 띄는 특징을 적어주세요." class="form-control" id="title" name = "title">
+            <input type="text" required placeholder="눈에 띄는 특징을 적어주세요." class="form-control" id="character" name="character">
           </div>
           &nbsp;
           <div class="form-outline mb-4">
           <label for="usr">내용</label>           
-            <textarea class="form-control" id="textAreaExample6" rows="3" placeholder="기타사항을 입력해주세요." ></textarea>
+            <textarea class="form-control" id="textAreaExample6" rows="3" placeholder="기타사항을 입력해주세요." name="
+"></textarea>
             <label class="form-label" for="textAreaExample6"></label>
           </div>
           <div class="form-group">
@@ -257,7 +268,7 @@
             <input type="file" class="form-control-file border" name="file" >
           </div>
           <br>
-            <button  type="submit" class="btn btn-primary">등록하기</button>
+            <button type="submit" class="btn btn-primary" onclick="location.href='${root}/report/detail'">등록하기</button>
       </div>
     </div>
   </div>
