@@ -59,12 +59,13 @@ public class MemberJoinController extends HttpServlet{
 		}
 		
 		//화면
-		if(result ==1 ) {
-			req.getSession().setAttribute("alertMsg", "회원가입 성공!!");
-			resp.sendRedirect("/app01");
+		String root = req.getContextPath();
+		if(result == 1) {
+			req.getSession().setAttribute("alertMsg", "회원가입 성공!!!");
+			resp.sendRedirect(root);
 		}else {
-			req.setAttribute("errorMsg", "회원가입 실패..");
-			req.getRequestDispatcher("/WEB-INF/views/common/errorPage.jsp").forward(req, resp);
+			req.getSession().setAttribute("alertMsg", "회원가입 실패...");
+			resp.sendRedirect(root);
 		}
 	
 	

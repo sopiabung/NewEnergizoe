@@ -103,10 +103,10 @@
 
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        <button onclick="location.href='${root}/chat/list'" class="accordion-button" type="button" data-bs-toggle="collapse"
                           data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true"
                           aria-controls="panelsStayOpen-collapseThree">
-                          <a href="#">나의 채팅</a> 
+                          <a>나의 채팅</a> 
                         </button>
                       </h2>
                     </div>

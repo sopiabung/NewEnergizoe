@@ -44,8 +44,8 @@ public class MemberQuitController extends HttpServlet{
 			req.getSession().setAttribute("alertMsg", "탈퇴성공!!");//세션에 알람메시지 나오기
 			resp.sendRedirect("/app01");
 		}else {
-			req.setAttribute("errorMsg", "탈퇴실패..");
-			req.getRequestDispatcher("/WEB-INF/views/common/errorPage.jsp").forward(req, resp);
+			req.getSession().setAttribute("alertMsg", "탈퇴 실패");//세션에 알람메시지 나오기
+			resp.sendRedirect("/app01");
 		}
 
 

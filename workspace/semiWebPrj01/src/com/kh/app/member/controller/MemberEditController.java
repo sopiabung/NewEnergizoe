@@ -19,15 +19,15 @@ public class MemberEditController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getRequestDispatcher("/WEB-INF/views/member/myPage.jsp").forward(req, resp);
-		System.out.println("doGet");
 		
 	}
 	
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("doPost");
 		//HttpSession ss = request.getSession();
+		
+		int result = 0;
 		
 		try {
 		//데이터 꺼내기
@@ -43,7 +43,6 @@ public class MemberEditController extends HttpServlet {
 		String memberAddress = req.getParameter("memberAddress");
 		String memberEmail = req.getParameter("memberEmail");
 		
-		System.out.println("컨트롤러"+no);
 		
 		//데이터 뭉치기
 		MemberVo vo = new MemberVo();
@@ -59,7 +58,7 @@ public class MemberEditController extends HttpServlet {
 		vo.setEmail(memberEmail);
 		
 		MemberService ms = new MemberService();
-			ms.edit(vo);
+			result = ms.edit(vo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -67,6 +66,15 @@ public class MemberEditController extends HttpServlet {
 		//요청은 보내지만 db에는 update안되는상황
 		
 		//화면
+		String root = req.getContextPath();
+		if(result == 1) {
+			req.getSession().setAttribute("alertMsg", "회원 정보 수정 완료!!!");
+			resp.sendRedirect(root);
+		}else {
+			req.getSession().setAttribute("alertMsg", "회원 정보 수정 실패...");
+			resp.sendRedirect(root);
+			
+		}
 		
 		
 		

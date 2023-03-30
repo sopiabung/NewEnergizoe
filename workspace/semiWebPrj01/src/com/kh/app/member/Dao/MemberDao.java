@@ -33,7 +33,6 @@ public class MemberDao {
 
 		close(pstmt);
 
-		System.out.println(vo);
 		return result;
 	}
 	
@@ -59,10 +58,11 @@ public class MemberDao {
 			String nick = rs.getString("NICK");
 
 			loginMember = new MemberVo();
-			loginMember.setId(no);
+			loginMember.setNo(no);
 			loginMember.setId(id);
 			loginMember.setPwd(pwd);
 			loginMember.setNick(nick);
+			
 		}
 		close(rs);
 		close(pstmt);
@@ -173,8 +173,6 @@ public class MemberDao {
 		pstmt.setString(8, vo.getNo());
 		int result = pstmt.executeUpdate();
 		
-		System.out.println(result);
-		System.out.println(vo);
 		
 		//CLOSE
 		close(pstmt);
