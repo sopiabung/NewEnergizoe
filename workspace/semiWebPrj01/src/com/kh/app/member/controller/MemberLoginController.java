@@ -46,10 +46,11 @@ public class MemberLoginController extends HttpServlet{
 		String root = req.getContextPath();
 		if(loginMember != null) {
 			req.getSession().setAttribute("loginMember", loginMember);
+			req.setAttribute("alertMsg", "로그인 성공!!!");
 			resp.sendRedirect(root);
 		}else {
 			req.setAttribute("alertMsg", "로그인 실패..");
-			req.getRequestDispatcher("/WEB-INF/views/common/errorPage.jsp").forward(req, resp);
+			resp.sendRedirect(root);
 			
 			
 		}

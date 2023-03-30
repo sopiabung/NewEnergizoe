@@ -10,8 +10,10 @@
 		<script>
 			alert('${alertMsg}');
 		</script>
+		
+		<c:remove var="alertMsg" scope="session"/>
 	</c:if>
-	<c:remove var="alertMsg" scope="session"/>
+	
 	
 <!-- Custom styles for this template --> <link href="navbar.css" rel="stylesheet">
 <link rel="stylesheet" href="${root}/resources/css/common/header.css">
@@ -52,15 +54,13 @@
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">신고하기</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/app01/report/List">실종 신고</a></li>
-                <li><a class="dropdown-item" href="#">목격 신고</a></li>
-                <li><a class="dropdown-item" href="#">보호 신고</a></li>
               </ul>
             </li>
             
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">입양하기</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/app01/adopt/prom/list">입양 신청</a></li>
+                <li><a class="dropdown-item" href="/app01/adoptPromList.jsp">입양 신청</a></li>
                 <li><a class="dropdown-item" href="/app01/adoptReviewList.jsp">입양 후기</a></li>
               </ul>
             </li>

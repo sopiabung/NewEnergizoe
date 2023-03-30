@@ -1,4 +1,4 @@
-`<%@ page language="java" contentType="text/html; charset=UTF-8" 
+<%@ page language="java" contentType="text/html; charset=UTF-8" 
     pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
@@ -56,6 +56,7 @@
                     <div class="container">
                         <table class="table" id="user-table">
                         <thead>
+                       	<a href="/app01/chat">
                          <tr>
                            <th width="6%" class="text-center">방번호</th>
                            <th width="44%" class="text-center">게시글제목</th>
@@ -63,6 +64,7 @@
                            <th width="20%" class="text-center">작성일</th>
                            <th width="13%" class="text-center">구분(입양/홍보)</th>
                          </tr>
+                       	</a>
                          </thead>
                          <tbody>
                          <c:forEach var="vo" items="">
@@ -92,7 +94,6 @@
             </div>
     </form>
     
-    <%@include file="/WEB-INF/views/common/paging.jsp" %>
 		<%@include file="/WEB-INF/views/common/footer.jsp" %>
     
   </body>

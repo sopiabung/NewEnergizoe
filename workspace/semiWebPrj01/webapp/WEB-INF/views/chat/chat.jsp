@@ -86,7 +86,7 @@
                 </div>
                 <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
                   <div class="input-group mb-0">
-                    <input type="text" class="form-control" placeholder="메시지를 입력하세요"
+                    <input type="text" name="content" class="form-control" placeholder="메시지를 입력하세요"
                       aria-label="Recipient's username" aria-describedby="button-addon2" />
                     <button class="btn btn-warning" type="button" id="button-addon2" style="padding-top: .55rem;">
                       전송하기

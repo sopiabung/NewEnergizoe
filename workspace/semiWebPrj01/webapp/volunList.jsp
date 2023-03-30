@@ -181,12 +181,13 @@
                     <div class="col-sm-3 info2">
                       <div class="row">
                         <div class="col-md-12">
-                          <button class="btn btn-primary vol-btn">자세히 보기</button>
+                          <button onclick="location.href='/app01/volun/detail'" class="btn btn-primary vol-btn">자세히 보기</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                
                 <div class="choice-menu col-sm-6">
                   <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/28/111500268.2.jpg" alt="">
                   <div class="row">
