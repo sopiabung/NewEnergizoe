@@ -48,6 +48,11 @@
 #footerBtn {
 	margin-left: 44%;
 }
+
+#listbtn{
+    float: right;
+	position: relative;
+    }
 </style>
 
 <link href="headers.css" rel="stylesheet">
@@ -59,6 +64,7 @@
 
 	<!-- 본문 여기에 -->
 	<main class="flex-shrink-0">
+		<a id="listbtn"href="/app01/notice/noticeList" class="btn btn-outline-secondary">목록으로</a>
 		<div class="row">
 
 			<div>
