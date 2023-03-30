@@ -24,20 +24,24 @@ public class ReportMisWirteController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+	
+		
 		//데이터 꺼내기
-		String writer = req.getParameter("writer");
 		String title = req.getParameter("title");
+		String content = req.getParameter("content");
 		String misDate = req.getParameter("misDate");
 		String area = req.getParameter("area");
-		String content = req.getParameter("content");
+		String writer = req.getParameter("writer");
 		
 		//데이터 뭉치기
 		ReportMisVo vo = new ReportMisVo();
-		vo.setWriter(writer);
 		vo.setTitle(title);
+		vo.setContent(content);
 		vo.setMisDate(misDate);
 		vo.setArea(area);
-		vo.setContent(content);
+		vo.setWriter(writer);
+		
+
 		
 		int result = 0;
 		try {

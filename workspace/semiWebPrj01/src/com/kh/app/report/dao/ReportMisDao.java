@@ -19,7 +19,7 @@ public class ReportMisDao {
 		
 		
 		//SQL(close)
-		String sql = "SELECT B.REPORT_NO , B.TITLE , B.CONTENT , B.ENROLL_DATE , B.MIS_DATE , B.AREA , B.WRITER , M.NICK FROM MIS_BO B JOIN MEMBER M ON B.WRITER = M.NO WHERE B.DEL_YN = 'N'";
+		String sql = "SELECT B.REPORT_NO , B.TITLE , B.CONTENT , B.ENROLL_DATE , B.MIS_DATE , B.AREA , B.WRITER , M.NICK FROM MIS_BO B JOIN MEMBER M ON B.WRITER = M.NO WHERE B.DEL_YN = 'N' ORDER BY B.REPORT_NO DESC";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
 		
@@ -37,7 +37,7 @@ public class ReportMisDao {
 			String writer = rs.getString("NICK");
 			
 			ReportMisVo vo = new ReportMisVo();
-			vo.setReportNo(reportNo);
+			vo.setNo(reportNo);
 			vo.setTitle(title);
 			vo.setContent(content);
 			vo.setEnrollDate(enrollDate);
@@ -64,9 +64,47 @@ public class ReportMisDao {
 		pstmt.setString(5, vo.getWriter());
 		int result = pstmt.executeUpdate();
 		
+		
 		JDBCTemplate.close(pstmt);
 		
 		return result;
+	}
+
+	//게시글 상세조회
+	public ReportMisVo selectOne(Connection conn, String reportNo) throws Exception {
+		
+		//SQL
+		String sql = "SELECT B.REPORT_NO, B.TITLE, B.CONTENT, B.ENROLL_DATE, B.MIS_DATE, B.AREA, M.NICK FROM MIS_BO B JOIN MEMBER M ON (B.WRITER = M.NO) WHERE B.REPORT_NO = ? AND B.DEL_YN = 'N'";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, reportNo);
+		ResultSet rs = pstmt.executeQuery();
+		
+		//rs ->obj
+		ReportMisVo ReportMisVo = null;
+		if(rs.next()) {
+			String no = rs.getString("REPORT_NO");
+			String title = rs.getString("TITLE");
+			String content = rs.getString("CONTENT");
+			String enrollDate = rs.getString("ENROLL_DATE");
+			String misDate = rs.getString("MIS_DATE");
+			String area = rs.getString("AREA");
+			String writer = rs.getString("NICK");
+			
+			ReportMisVo = new ReportMisVo();
+			ReportMisVo.setNo(no);
+			ReportMisVo.setTitle(title);
+			ReportMisVo.setContent(content);
+			ReportMisVo.setEnrollDate(enrollDate);
+			ReportMisVo.setMisDate(misDate);
+			ReportMisVo.setArea(area);
+			ReportMisVo.setWriter(writer);
+		}
+		
+		//close
+		JDBCTemplate.close(rs);
+		JDBCTemplate.close(pstmt);
+		
+		return ReportMisVo;
 	}
 	
 }//class

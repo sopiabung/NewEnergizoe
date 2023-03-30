@@ -40,6 +40,7 @@
   	#btn-wrap a btn {
   		width: 50px;
   		height: 5px;
+  		padding-top: 30px;
   	}
   	
   	#page-area {
@@ -68,7 +69,7 @@
 			<tbody>
 				<c:forEach items="${ReportMisList}" var="bvo">
 				<tr>
-					<td>${bvo.reportNo}</td>
+					<td>${bvo.no}</td>
 					<td>${bvo.title}</td>
 					<td>${bvo.writer}</td>
 					<td>${bvo.enrollDate}</td>
@@ -97,3 +98,11 @@
 	<%@include file="/WEB-INF/views/common/footer.jsp" %>
 </body>
 </html>
+
+<script>
+	const tbody = document.querySelector("tbody");
+	tbody.addEventListener("click" , function(event){
+		const no = event.target.parentNode.children[0].innerText;
+		location.href = "/app01/report/detail?no=" + no;
+	});
+</script>

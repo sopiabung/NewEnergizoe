@@ -40,7 +40,7 @@
           </div>
           	
           <div class="container2" style="margin-top:20px">      
-    	  실종날짜&nbsp;<input style="width: 30%;" type="text" name="misDate" placeholder="ex)2023/03/29">
+    	  실종날짜&nbsp;<input style="width: 30%;" type="text" name="misDate" placeholder="ex)20230329">
     	  </div>
     	  
     	  <div class="container2" style="margin-top:20px"> 
@@ -52,17 +52,10 @@
     	 <textarea style="width: 80%; height: 200px;" rows="5" name="content" placeholder="실종 반려동물 이름, 나이, 품종, 성별, 특징 등 구체적으로 작성"></textarea>
           </div>
 
-          <div class="form-group">
-           <div class="container2" style="margin-top:50px">
-            <p>사진파일첨부 (최대3장)</p><br>
-                   
-            <input type="file" class="form-control-file border" name="file" >
-            <input type="file" class="form-control-file border" name="file" >
-            <input type="file" class="form-control-file border" name="file" >
-          </div>
+       
           <br><br><br>
             <button type="submit" class="btn btn-primary">등록하기</button>
-          </div>
+          
           </form>
 	   </div>
 	 </div>

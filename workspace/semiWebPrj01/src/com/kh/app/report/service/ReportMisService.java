@@ -53,5 +53,23 @@ public class ReportMisService {
 		
 		return result;
 	}
+	
+	//게시글 상세조회
+	public ReportMisVo selectOne(String reportNo) throws Exception {
+		
+		//비지니스 로직
+		
+		//conn
+		Connection conn = JDBCTemplate.getConnection();
+		
+		//DAO 호출
+		ReportMisDao dao = new ReportMisDao();
+		ReportMisVo ReportMisvo = dao.selectOne(conn , reportNo);
+		
+		//tx, close
+		JDBCTemplate.close(conn);
+		
+		return ReportMisvo;
+	}
 
 }//class
