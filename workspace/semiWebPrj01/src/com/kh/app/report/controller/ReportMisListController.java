@@ -36,8 +36,6 @@ public class ReportMisListController extends HttpServlet{
 		}
 		
 		//화면
-		System.out.println(ReportMisList);
-		
 		req.setAttribute("ReportMisList", ReportMisList);
 		req.getRequestDispatcher("/WEB-INF/views/report/reportList.jsp").forward(req, resp);
 		

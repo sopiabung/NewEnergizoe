@@ -2,7 +2,7 @@ package com.kh.app.report.vo;
 
 public class ReportMisVo {
 	
-	private String reportNo;
+	private String no;
 	private String title;
 	private String content;
 	private String enrollDate;
@@ -18,7 +18,7 @@ public class ReportMisVo {
 	public ReportMisVo(String reportNo, String title, String content, String enrollDate, String delYn, String misDate,
 			String area, String writer) {
 		super();
-		this.reportNo = reportNo;
+		this.no = reportNo;
 		this.title = title;
 		this.content = content;
 		this.enrollDate = enrollDate;
@@ -30,15 +30,15 @@ public class ReportMisVo {
 	}
 	@Override
 	public String toString() {
-		return "ReportMisVo [reportNo=" + reportNo + ", title=" + title + ", content=" + content + ", enrollDate="
+		return "ReportMisVo [reportNo=" + no + ", title=" + title + ", content=" + content + ", enrollDate="
 				+ enrollDate + ", delYn=" + delYn + ", misDate=" + misDate + ", area=" + area + ", writer=" + writer
 				+ "]";
 	}
-	public String getReportNo() {
-		return reportNo;
+	public String getNo() {
+		return no;
 	}
-	public void setReportNo(String reportNo) {
-		this.reportNo = reportNo;
+	public void setNo(String reportNo) {
+		this.no = reportNo;
 	}
 	public String getTitle() {
 		return title;
