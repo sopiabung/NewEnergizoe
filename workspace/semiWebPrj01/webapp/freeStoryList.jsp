@@ -9,7 +9,7 @@
 <meta name="author"
 	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.104.2">
-<title>자유게시판 우리아이이야기 목록</title>
+<title>자유게시판 목록</title>
 
 <link rel="canonical"
 	href="https://getbootstrap.com/docs/5.2/examples/headers/">
@@ -51,6 +51,13 @@
 #navbarSet {
 	width: 100%;
 }
+
+.center {
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
 </style>
 
 <!-- Custom styles for this template -->
@@ -62,7 +69,7 @@
 	<!-- 헤더들어갈자리  -->
 	<!-- 메인 -->
 	<div class="text-center">
-		<a href="#"><img src="resources/img/b1.jpg" width="100%"
+		<a href="#"><img src="/app01/resources/img/b1.jpg" width="100%"
 			class="img-fluid" alt="..."></a>
 	</div>
 
@@ -74,16 +81,6 @@
 				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav" id="navbarNavIn">
-					<li class="nav-itemFree"><a class="nav-link active"
-						aria-current="page" href="#">사진자랑</a></li>
-					<li class="nav-itemFree"><a class="nav-link active"
-						aria-current="page" href="#">우리아이이야기</a></li>
-					<li class="nav-itemFree"><a class="nav-link active"
-						aria-current="page" href="#">소통해요</a></li>
-				</ul>
-			</div>
 		</div>
 	</nav>
 
@@ -107,24 +104,6 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<div id="page-area">
-		<c:if test="${ pageVo.currentPage > 1 }">
-			<a href="/notice/noticeList?page=${pageVo.currentPage-1}">이전</a>
-		</c:if>
-
-		<c:forEach var="i" begin="${pageVo.startPage}" end="${pageVo.endPage}">
-			<c:if test="${pageVo.currentPage == i}">
-				<span>${i}</span>
-			</c:if>
-			<c:if test="${pageVo.currentPage != i}">
-				<a href="/notice/noticeList?page=${i}">${i}</a>
-			</c:if>
-		</c:forEach>
-
-		<c:if test="${ pageVo.currentPage < pageVo.maxPage }">
-			<a href="/notice/noticeList?page=${pageVo.currentPage+1}">다음</a>
-		</c:if>
-	</div>
 	<!-- 푸터들어갈자리 -->
 	<%@include file="/WEB-INF/views/common/paging.jsp"%>
 	<%@include file="/WEB-INF/views/common/footer.jsp"%>

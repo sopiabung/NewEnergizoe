@@ -29,16 +29,23 @@
 
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link href="/resources/common/bootstrap.min.css" rel="stylesheet">
+
 <style>
-.nav-item {
+.nav-item1 {
 	margin-left: 310px;
 }
 
-#navbarSet {
+#navbarSet1 {
 	width: 100%;
 }
 
-#footerBtn {
+#writeBtn {
+	float: right;
+	position: relative;
+}
+
+#footerBtn1 {
 	margin-left: 45%;
 }
 
@@ -46,6 +53,13 @@
 	margin-left: 280px;
 	width: 1000px;
 }
+
+.center {
+    place-content: center;
+    place-items: center;
+}
+
+
 </style>
 
 <!-- Custom styles for this template -->
@@ -57,12 +71,13 @@
 
 	<!-- 메인 -->
 	<div class="text-center">
-		<a href="#"><img src="img/notice1.jpg" width="100%"
+		<a href="#"><img src="/app01/resources/img/notice1.jpg" width="100%"
 			class="img-fluid" alt="..."></a>
 	</div>
 
-
-
+<div class="col-md-3 text-end" id="writeBtn">
+		<button onclick="location.href='/app01/notice/noticeForm'" type="button" class="btn btn-outline-primary me-2">글쓰기</button>
+	</div>
 
 	<table class="table table-hover" id="noticeList">
 		<thead>
@@ -80,27 +95,6 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<div class="col-md-3 text-end" id="writeBtn">
-		<button onclick="location.href='/app01/notice/noticeForm'" type="button" class="btn btn-outline-primary me-2">글쓰기</button>
-	</div>
-	<div id="page-area">
-		<c:if test="${ pageVo.currentPage > 1 }">
-			<a href="/notice/noticeList?page=${pageVo.currentPage-1}">이전</a>
-		</c:if>
-
-		<c:forEach var="i" begin="${pageVo.startPage}" end="${pageVo.endPage}">
-			<c:if test="${pageVo.currentPage == i}">
-				<span>${i}</span>
-			</c:if>
-			<c:if test="${pageVo.currentPage != i}">
-				<a href="/notice/noticeList?page=${i}">${i}</a>
-			</c:if>
-		</c:forEach>
-
-		<c:if test="${ pageVo.currentPage < pageVo.maxPage }">
-			<a href="/notice/noticeList?page=${pageVo.currentPage+1}">다음</a>
-		</c:if>
-	</div>
 	<!-- 푸터들어갈자리 -->
 	<%@include file="/WEB-INF/views/common/paging.jsp"%>
 	<%@include file="/WEB-INF/views/common/footer.jsp"%>

@@ -77,11 +77,6 @@
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">등록</button>
                   </div>
-                  
-                  <a href="list" class="btn btn-outline-secondary">목록</a> <a
-                    href="modify?bno=${board.bno}" class="btn btn-outline-warning">수정</a>
-                  <a href="remove?bno=${board.bno}" class="btn btn-outline-danger"
-                    onclick="return confirm('삭제하시겠습니까?')">삭제</a>
               </form>
           </div>
       </div>
