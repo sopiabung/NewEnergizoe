@@ -2,7 +2,9 @@ package com.kh.app.animal.vo;
 
 public class AnimalVo {
 	
-	private String aniNo;
+	private int aniNo;
+	private int typeCode;
+	private int specCode;
 	private String color;
 	private String birthYear;
 	private String neutYnx;
@@ -10,14 +12,48 @@ public class AnimalVo {
 	private String character;
 	private String gender;
 	private String name;
-	private AnimalSpVo animalSpVo;
-	private AnimalTVo animalTVo;
 	
-	public String getAniNo() {
+	public AnimalVo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public AnimalVo(int aniNo, int typeCode, int specCode, String color, String birthYear, String neutYnx,
+			String weight, String character, String gender, String name) {
+		super();
+		this.aniNo = aniNo;
+		this.typeCode = typeCode;
+		this.specCode = specCode;
+		this.color = color;
+		this.birthYear = birthYear;
+		this.neutYnx = neutYnx;
+		this.weight = weight;
+		this.character = character;
+		this.gender = gender;
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "AnimalVo [aniNo=" + aniNo + ", typeCode=" + typeCode + ", specCode=" + specCode + ", color=" + color
+				+ ", birthYear=" + birthYear + ", neutYnx=" + neutYnx + ", weight=" + weight + ", character="
+				+ character + ", gender=" + gender + ", name=" + name + "]";
+	}
+	public int getAniNo() {
 		return aniNo;
 	}
-	public void setAniNo(String aniNo) {
+	public void setAniNo(int aniNo) {
 		this.aniNo = aniNo;
+	}
+	public int getTypeCode() {
+		return typeCode;
+	}
+	public void setTypeCode(int typeCode) {
+		this.typeCode = typeCode;
+	}
+	public int getSpecCode() {
+		return specCode;
+	}
+	public void setSpecCode(int specCode) {
+		this.specCode = specCode;
 	}
 	public String getColor() {
 		return color;
@@ -61,49 +97,7 @@ public class AnimalVo {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public AnimalSpVo getAnimalSpVo() {
-		return animalSpVo;
-	}
-	public void setAnimalSpVo(AnimalSpVo animalSpVo) {
-		this.animalSpVo = animalSpVo;
-	}
-	public AnimalTVo getAnimalTVo() {
-		return animalTVo;
-	}
-	public void setAnimalTVo(AnimalTVo animalTVo) {
-		this.animalTVo = animalTVo;
-	}
-	@Override
-	public String toString() {
-		return "AnimalVo [aniNo=" + aniNo + ", color=" + color + ", birthYear=" + birthYear + ", neutYnx=" + neutYnx
-				+ ", weight=" + weight + ", character=" + character + ", gender=" + gender + ", name=" + name
-				+ ", animalSpVo=" + animalSpVo + ", animalTVo=" + animalTVo + "]";
-	}
-	public AnimalVo(String aniNo, String color, String birthYear, String neutYnx, String weight, String character,
-			String gender, String name, AnimalSpVo animalSpVo, AnimalTVo animalTVo) {
-		super();
-		this.aniNo = aniNo;
-		this.color = color;
-		this.birthYear = birthYear;
-		this.neutYnx = neutYnx;
-		this.weight = weight;
-		this.character = character;
-		this.gender = gender;
-		this.name = name;
-		this.animalSpVo = animalSpVo;
-		this.animalTVo = animalTVo;
-	}
-	public AnimalVo() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }

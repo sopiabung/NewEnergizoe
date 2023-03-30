@@ -67,35 +67,10 @@
                         <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-ContactForm" role="tabpanel"
                                 aria-labelledby="nav-ContactForm-tab">
-                                <form class="custom-form contact-form mb-5 mb-lg-0" action="${root}/adopt/prom/write" method="post"
-                                    role="form">
+                                <form class="custom-form contact-form mb-5 mb-lg-0" action="/app01/adopt/prom/write" method="post"
+                                    role="form" enctype="multipart/form-data">
                                     <div class="contact-form-body">
-                                        <div class="shlter_name">
-                                            <h6>보호소 정보</h6>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="text" name="shelNick" id="contact-name"
-                                                    class="form-control" placeholder="kh보호소" required>
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="email" name="shelEmail" id="contact-email"
-                                                    pattern="[^ @]*@[^ @]*" class="form-control"
-                                                    placeholder="kh보호소 이메일" required>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="text" name="shelHp" id="contact-name"
-                                                    class="form-control" placeholder="kh보호소 전화번호" required>
-                                            </div>
-
-                                           
-                                        </div>
-
-                                        <input type="text" name="shelAddress" id="contact-company"
-                                            class="form-control" placeholder="kh보호소 주소" required>
+                                        
 
                                          <div class="animal_name">
                                             <h6>동물 정보</h6>
@@ -103,8 +78,8 @@
                                          <div class="row">
                                             <div class="col-lg-6 col-md-6 col-12">
                                                 <div class="form-check form-control" style="border-color: white;">
-                                                    <input class="form-check-input" type="radio" name="animalSpec"
-                                                        id="flexRadioDefault1">
+                                                    <input class="form-check-input" type="radio" name="animalType"
+                                                        id="flexRadioDefault1" value="1">
                                                     <label class="form-check-label" for="flexRadioDefault1">
                                                         강아지
                                                     </label>
@@ -113,8 +88,8 @@
             
                                             <div class="col-lg-6 col-md-6 col-12">
                                                 <div class="form-check form-control" style="border-color: white;">
-                                                    <input class="form-check-input" type="radio" name="animalSpec"
-                                                        id="flexRadioDefault2">
+                                                    <input class="form-check-input" type="radio" name="animalType"
+                                                        id="flexRadioDefault2" value="2">
                                                     <label class="form-check-label" for="flexRadioDefault2">
                                                         고양이
                                                     </label>
@@ -131,7 +106,7 @@
                                                 <div class="col-lg-6 col-md-6 col-12">
                                                     <div class="form-check form-control" style="border-color: white;">
                                                         <input class="form-check-input" type="radio" name="animalNeut"
-                                                            id="flexRadioDefault1">
+                                                            id="flexRadioDefault1" value="Y">
                                                         <label class="form-check-label" for="flexRadioDefault1">
                                                             중성화 O
                                                         </label>
@@ -141,14 +116,14 @@
                                                 <div class="col-lg-6 col-md-6 col-12">
                                                     <div class="form-check form-control" style="border-color: white;">
                                                         <input class="form-check-input" type="radio" name="animalNeut"
-                                                            id="flexRadioDefault2">
+                                                            id="flexRadioDefault2" value="N">
                                                         <label class="form-check-label" for="flexRadioDefault2">
                                                             중성화 X
                                                         </label>
                                                     </div>
                                                 </div>
                                             </div>
-                                        <input type="text" name="animalAge" id="contact-company"
+                                        <input type="text" name="animalBirthYear" id="contact-company"
                                             class="form-control" placeholder="추정나이" required>
                                         <input type="text" name="animalWeight" id="contact-company"
                                             class="form-control" placeholder="몸무게" required>   
